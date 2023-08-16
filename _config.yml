@@ -1,5 +1,5 @@
 ---
-title: WADComs
+title: Tools
 
 exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md']
 
