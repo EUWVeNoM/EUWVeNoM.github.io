@@ -1,6 +1,6 @@
 ---
 layout: page
-title: WADComs
+title: Tools
 ---
 
 ![logo](/assets/logo.png){:.logo}
