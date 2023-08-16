@@ -8,12 +8,17 @@ description: |
 
   	Target IP: 10.10.10.1
 
+  	Username: john
+
+  	Password: password123
+
   	Domain: test.local
 
 command: |
-  bloodhound.py -d test.local -v --zip -c All -dc test.local -ns 10.10.10.1
+  bloodhound.py -u john -p password123 -d test.local -v --zip -c All -dc test.local -ns 10.10.10.1
 items:
-  - No_Creds
+  - Username
+  - Password
 services:
   - LDAP
 attack_types:
