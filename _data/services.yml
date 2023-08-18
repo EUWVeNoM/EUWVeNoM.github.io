@@ -1,32 +1,32 @@
 ---
 SMB:
   label: SMB
-  description: You've found the SMB service open  and need to know what you can do with it.
+  description: Vous avez trouvé le service SMB ouvert et vous voulez savoir ce que vous pouvez faire avec.
 
 WMI:
   label: WMI
-  description: You've found the Windows Management Intstrumentation (WMI) service open and need to know what you can do with it.
+  description: Le service Windows Management Intstrumentation (WMI) est ouvert et vous devez savoir ce que vous pouvez faire avec.
 
 DCOM:
   label: DCOM
-  description: You've found the DCOM service open and need to know what you can do with it.
+  description: Le service DCOM est ouvert et vous devez savoir ce que vous pouvez faire avec.
 
 Kerberos:
   label: Kerberos
-  description: You've found the kerberos service open and need to know what you can do with it.
+  description: Vous avez trouvé le service kerberos ouvert et vous devez savoir ce que vous pouvez faire avec.
 
 RPC:
   label: RPC
-  description: You've found the RPC service open and need to know what you can do with it.
+  description: Vous avez trouvé le service RPC ouvert et vous devez savoir ce que vous pouvez en faire.
 
 LDAP:
   label: LDAP
-  description: You've found the LDAP service open and need to know what you can do with it.
+  description: Le service LDAP est ouvert et vous devez savoir ce que vous pouvez en faire.
 
 NTLM:
   label: NTLM
-  description: Command relates to the NTLM protocol.
+  description: La commande concerne le protocole NTLM.
 
 DNS:
   label: DNS
-  description: Command relates to the DNS service.
+  description: La commande concerne le service DNS.
