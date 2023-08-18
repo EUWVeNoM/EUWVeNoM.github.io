@@ -1,15 +1,20 @@
 ---
+OSINT:
+  label: OSINT
+  description: La commande se concentre sur les renseignements d'origine sources ouvertes.
+
 Enumeration:
   label: Enumeration
-  description: Command focuses on enumeration.
+  description: La commande se concentre sur l'énumération.
 
 Exploitation:
   label: Exploitation
-  description: Command focuses on exploitation.
+  description: La commande se concentre sur l'éxploitation.
 
 Persistence:
   label: Persistence
-  description: Command focuses on persistence.
+  description: La commande se concentre sur la persistance.
+  
 PrivEsc:
   label: Privilege Escalation
-  description: Command focuses on privilege escalation.
+  description: La commande se concentre sur l'escalade des privilèges.
