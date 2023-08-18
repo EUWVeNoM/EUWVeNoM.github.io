@@ -8,7 +8,7 @@
 <div id="bin-search-wrapper">
 
     <ul id="bin-search-filters" class="filter-list">
-	<h3>What you have:</h3>
+	<h3>Ce que vous avez :</h3>
 	{% for item_pair in site.data.items %}
 	{% assign item_id = item_pair[0] %}
 	{% assign item = item_pair[1] %}
@@ -24,7 +24,7 @@
         {% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>Attack Type:</h3>
+	<h3>Type d'attaque :</h3>
 	{% for attack_pair in site.data.attack_types %}
 	{% assign attack_id = attack_pair[0] %}
 	{% assign attack = attack_pair[1] %}
@@ -49,7 +49,7 @@
     <table id="bin-table">
         <thead>
             <tr>
-                <th>Command</th>
+                <th>Commandes</th>
             </tr>
         </thead>
         <tbody>
