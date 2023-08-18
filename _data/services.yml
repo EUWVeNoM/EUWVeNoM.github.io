@@ -30,3 +30,7 @@ NTLM:
 DNS:
   label: DNS
   description: La commande concerne le service DNS.
+
+HTTP:
+  label: HTTP
+  description: La commande concerne le service HTTP.
