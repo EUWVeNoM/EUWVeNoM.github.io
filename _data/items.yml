@@ -1,32 +1,32 @@
 ---
 Username:
   label: Username
-  description: You've found username(s) and need to know what you can do with them.
+  description: Vous avez trouvé le(s) nom(s) d'utilisateur et vous voulez savoir ce que vous pouvez faire avec.
 
 Password:
   label: Password
-  description: You've found password(s) and need to know what you can do with them.
+  description: Vous avez trouvé le(s) mot(s) de passe et vous voulez savoir ce que vous pouvez en faire.
 
 No_Creds:
   label: No Creds
-  description: You don't have any usernames or passwords and need to know what you can still do.
+  description: Vous n'avez pas de nom d'utilisateur ou de mot de passe et vous avez besoin de savoir ce que vous pouvez encore faire.
 
 Hash:
   label: Hash
-  description: You've found hash(es) and need to know what you can do with them.
+  description: Vous avez trouvé des hachages et vous voulez savoir ce que vous pouvez en faire.
 
 TGS:
   label: TGS
-  description: You've found a user's Ticket Granting Service and need to know what you can do with it.
+  description: Vous avez trouvé le Ticket Granting Service d'un utilisateur et vous voulez savoir ce que vous pouvez en faire.
   
 TGT:
   label: TGT
-  description: You've found a user's or computer Ticket Granting Ticket and need to know what you can do with it.
+  description: Vous avez trouvé le ticket d'un utilisateur ou d'un ordinateur et vous voulez savoir ce que vous pouvez en faire.
   
 PFX:
   label: PFX
-  description: You've found a computer PFX file, which is in a PKCS#12 format, and need to know what you can do with it.
+  description: Vous avez trouvé un fichier PFX d'ordinateur, au format PKCS#12, et vous voulez savoir ce que vous pouvez en faire.
 
 Shell:
   label: Shell
-  description: You have a shell on the Windows host and need to know what you can do.
+  description: Vous avez un shell sur un hôte et vous voulez savoir ce que vous pouvez faire.
