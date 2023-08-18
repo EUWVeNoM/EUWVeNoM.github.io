@@ -9,7 +9,7 @@ Enumeration:
 
 Exploitation:
   label: Exploitation
-  description: La commande se concentre sur l'éxploitation.
+  description: La commande se concentre sur l'exploitation.
 
 Persistence:
   label: Persistence
