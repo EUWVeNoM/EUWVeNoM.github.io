@@ -1,8 +1,8 @@
 ---
 Linux:
   label: Linux
-  description: Command can be run on Linux.
+  description: La commande peut être exécutée sous Linux.
 
 Windows:
   label: Windows
-  description: Command can be run on Windows.
+  description: La commande peut être exécutée sous Windows.
