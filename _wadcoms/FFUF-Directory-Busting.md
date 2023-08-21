@@ -11,8 +11,8 @@ description: |
     Dictionnaire: <dict>
 
 command: |
-  - ffuf -w <dict> -u https://<IP>/FUZZ
-  - ffuf -w <dict> -u https://<domain.local>/FUZZ
+  ffuf -w <dict> -u https://<IP>/FUZZ
+  ffuf -w <dict> -u https://<domain.local>/FUZZ
 items:
   - No_Creds
 services:

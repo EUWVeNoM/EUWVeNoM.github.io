@@ -9,7 +9,7 @@ description: |
     Dictionnaire: <dict>
 
 command: |
-  - ffuf -w <dict> -u http://<domain.local>/ -H "Host: FUZZ.<domain.local>"
+  ffuf -w <dict> -u http://<domain.local>/ -H "Host: FUZZ.<domain.local>"
 items:
   - No_Creds
 services:
