@@ -5,4 +5,4 @@ Retrouvez le projet à l'adresse suivante : https://github.com/EUWVeNoM/EUWVeNoM
 
 Created by [Venom](https://twitter.com/EuwVenom)
 
-[!["Buy Me A Coffee"](https://img.buymeacoffee.com/button-api/?text=Buy me a muscle&emoji=💪🏼&slug=euwvenom&button_colour=7a0000&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00)](https://www.buymeacoffee.com/euwvenom)
+[!["Buy Me A Coffee"](https://img.buymeacoffee.com/button-api/?text=Buy+me+a+muscle&emoji=💪🏼&slug=euwvenom&button_colour=7a0000&font_colour=ffffff&font_family=Arial&outline_colour=ffffff&coffee_colour=FFDD00)](https://www.buymeacoffee.com/euwvenom)
