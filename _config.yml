@@ -1,12 +1,12 @@
 ---
-title: Tools
+title: Hackmurerie
 
 exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md']
 
 permalink: pretty
 
 collections:
-  wadcoms:
+  hackmurerie:
     output: true
 
 defaults:
