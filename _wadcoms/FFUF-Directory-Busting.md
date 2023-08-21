@@ -4,14 +4,11 @@ description: |
 
   Command Reference:
 
-  	Target IP: <IP>
-
     Domain: <domain.local>
 
     Dictionnaire: <dict>
 
 command: |
-  ffuf -w <dict> -u https://<IP>/FUZZ
   ffuf -w <dict> -u https://<domain.local>/FUZZ
 items:
   - No_Creds
