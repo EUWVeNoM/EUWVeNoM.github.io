@@ -11,6 +11,6 @@ collections:
 
 defaults:
   - scope:
-      path: '_wadcoms'
+      path: '_hackmurerie'
     values:
       layout: bin

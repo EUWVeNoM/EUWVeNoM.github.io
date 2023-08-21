@@ -10,5 +10,5 @@ bundle:
 	bundle install
 
 lint:
-	yamllint _wadcoms/*.md
+	yamllint _hackmurerie/*.md
 	scripts/validate-schema.py
