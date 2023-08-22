@@ -39,6 +39,13 @@
 	<li><input type="checkbox" id="{{ OS.label }}" name="OS_name" onclick='handleChange(this, "{{ OS.label }}");'><label id="{{ OS.label }}_label" for="{{ OS.label }}" data-title="{{ OS.description | replace: '\n', ' ' }}">{{ OS.label }}</label></li>
 	{% endfor %}
     </ul>
+	<h3>Approved:</h3>
+	{% for approved_pair in site.data.approved %}
+	{% assign approved_id = approved_pair[0] %}
+	{% assign approved = v_pair[1] %}
+	<li><input type="checkbox" id="{{ approved.label }}" name="approved_name" onclick='handleChange(this, "{{ approved.label }}");'><label id="{{ approved.label }}_label" for="{{ approved.label }}" data-title="{{ approved.description | replace: '\n', ' ' }}">{{ approved.label }}</label></li>
+	{% endfor %}
+    </ul>
 
 </div>
 <div style="margin-top: -20px;">
@@ -115,10 +122,11 @@
 		var allFilters = document.getElementsByName("service_name");
 		var allAttacks = document.getElementsByName("attack_name");
 		var allOS = document.getElementsByName("OS_name");
+		var allApproved = document.getElementsByName("approved_name");
 		var allItems_parsed = [];
 		var allFilters_parsed = [];
 		var allAttacks_parsed = []; 
-		var allOS_parsed = []; 
+		var allApproved_parsed = []; 
    
 		allFilters.forEach((f) => {
 			allFilters_parsed.push(f.id.toLowerCase());
@@ -136,6 +144,7 @@
 			allOS_parsed.push(o.id.toLowerCase());
 		});
 		var os_chosen = functionPatterns.filter(element => allOS_parsed.includes(element));
+		var approved_chosen = functionPatterns.filter(element => allApproved_parsed.includes(element));
    
 		document.querySelectorAll('#bin-table tbody tr').forEach(function (row) {
 			var show = true;
@@ -240,8 +249,20 @@
 				});
 			});
 		}
+
+		var found_approved = -1;
+		if (approved_chosen.length !== 0) {
+			found_approved = 0;
+			approved_chosen.forEach((o) => {
+				functionElems.forEach((i) => {
+					if (i.innerText.toLowerCase() == o) {
+						found_approved = found_approved + 1;
+					}
+				});
+			});
+		}
    
-		if ((!filled && (found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+		if ((!filled && (found_attack < 1 && found_filter < 1 && found_os < 1 && found_approved < 1 && !found_binName)) || (found_attack == 0 || found_filter == 0 || found_os == 0 || found_approved == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1) || (found_approved !== approved_chosen.length && found_approved !== -1)) || (binPattern.length !== 0 && !found_binName)) {
 		   row.style.display = 'none';
 		} else {
 			   row.style.display = '';
