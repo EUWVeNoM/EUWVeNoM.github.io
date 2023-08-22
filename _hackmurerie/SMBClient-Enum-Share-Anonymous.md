@@ -18,6 +18,7 @@ services:
   - SMB
 OS:
   - Linux
+  - Approved
 attack_types:
   - Enumeration
 references:
