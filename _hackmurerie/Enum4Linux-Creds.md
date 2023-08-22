@@ -1,17 +1,17 @@
 ---
 description: |
-  Enum4Linux est un outil permettant d'énumérer des informations à partir de systèmes Windows et Samba, en utilisant un certain nombre de techniques différentes. La commande suivante tente d'énumérer des informations à partir d'identifiants de connexion valides.
+  Enum4Linux is a tool for enumerating information from Windows and Samba systems, using a number of different techniques. The following command will attempt to enumerate information provided valid login credentials.
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Username: <user>
+  	Username: john
 
-  	Password: <passwd>
+  	Password: password123
 
 command: |
-  enum4linux -u <user> -p <passwd> -a <IP>
+  enum4linux -u john -p password123 -a 10.10.10.1
 items:
   - Username
   - Password
@@ -21,5 +21,4 @@ OS:
   - Linux
 references:
   - https://github.com/CiscoCXSecurity/enum4linux
-  - https://highon.coffee/blog/enum4linux-cheat-sheet/
 ---

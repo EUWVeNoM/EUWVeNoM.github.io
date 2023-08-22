@@ -1,20 +1,23 @@
 ---
 description: |
-  "CrackMapExec (alias CME) est un outil de post-exploitation qui permet d'automatiser l'évaluation de la sécurité des grands réseaux Active Directory." - https://github.com/mpgn/CrackMapExec/wiki. Cette commande énumère les groupes de domaine, les groupes locaux, les utilisateurs connectés, les identifiants relatifs (RID), les sessions, les utilisateurs de domaine, les partages/permissions SMB et obtient la politique de mot de passe du domaine. Vous pouvez également utiliser la notation CIDR pour cibler une plage d'adresses IP (par exemple <IP>/24).
+  "CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks." - https://github.com/byt3bl33d3r/CrackMapExec/wiki. This command will enumerate domain groups, local groups, logged on users, relative identifiers (RIDs), sessions, domain users, SMB shares/permissions, and get the domain password policy. You can also use CIDR notation to target a range of ip addresses (i.e. 10.10.10.0/24).
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Username: <user>
+  	Username: john
 
-  	Password: <passwd>
+  	Password: password123
+
+  	Hash (-H):  807726fcf9f188adc26eeafd7dc16bb7
 
 command: |
-  crackmapexec smb <IP> -u '<user>' -p '<passwd>' --groups --local-groups --loggedon-users --rid-brute --sessions --users --shares --pass-pol
+  crackmapexec smb 10.10.10.1 -u 'john' -p 'password123' --groups --local-groups --loggedon-users --rid-brute --sessions --users --shares --pass-pol
 items:
   - Username
   - Password
+  - Hash
 services:
   - SMB
 attack_types:
@@ -22,6 +25,6 @@ attack_types:
 OS:
   - Linux
 references:
-  - https://github.com/mpgn/CrackMapExec
-  - https://github.com/mpgn/CrackMapExec/wiki
+  - https://github.com/byt3bl33d3r/CrackMapExec
+  - https://github.com/byt3bl33d3r/CrackMapExec/wiki
 ---

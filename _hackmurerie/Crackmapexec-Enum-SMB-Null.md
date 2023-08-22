@@ -1,13 +1,13 @@
 ---
 description: |
-  "CrackMapExec (alias CME) est un outil de post-exploitation qui permet d'automatiser l'évaluation de la sécurité des grands réseaux Active Directory." - https://github.com/mpgn/CrackMapExec/wiki. Cette commande énumère l'hôte SMB en utilisant une session nulle. 
+  "CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks." - https://github.com/byt3bl33d3r/CrackMapExec/wiki. This command will enumerate the SMB host using a null session. 
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
 command: |
-  crackmapexec smb <IP> -u '' -p ''
+  crackmapexec smb 10.10.10.1 -u '' -p ''
 items:
   - No_Creds
 services:
@@ -17,6 +17,6 @@ attack_types:
 OS:
   - Linux
 references:
-  - https://github.com/mpgn/CrackMapExec
-  - https://github.com/mpgn/CrackMapExec/wiki
+  - https://github.com/byt3bl33d3r/CrackMapExec
+  - https://github.com/byt3bl33d3r/CrackMapExec/wiki
 ---

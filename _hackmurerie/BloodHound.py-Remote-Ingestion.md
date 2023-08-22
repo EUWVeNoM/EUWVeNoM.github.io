@@ -1,17 +1,17 @@
 ---
 description: |
-  BloodHound est une application web Javascript d'une seule page, construite sur Linkurious, compilée avec Electron, avec une base de données Neo4j alimentée par un collecteur de données. BloodHound utilise la théorie des graphes pour révéler les relations cachées et souvent involontaires au sein d'un environnement Active Directory. Les attaquants peuvent utiliser BloodHound pour identifier facilement des chemins d'attaque très complexes qui seraient autrement impossibles à identifier rapidement. Les défenseurs peuvent utiliser BloodHound pour identifier et éliminer ces mêmes chemins d'attaque. Les équipes bleues et rouges peuvent utiliser BloodHound pour mieux comprendre les relations de privilèges dans un environnement Active Directory.
+  BloodHound is a single page Javascript web application, built on top of Linkurious, compiled with Electron, with a Neo4j database fed by a data collector. BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment. Attackers can use BloodHound to easily identify highly complex attack paths that would otherwise be impossible to quickly identify. Defenders can use BloodHound to identify and eliminate those same attack paths. Both blue and red teams can use BloodHound to easily gain a deeper understanding of privilege relationships in an Active Directory environment.
 
-  BloodHound.py est un ingestor basé sur Python pour BloodHound, basé sur Impacket. Il vous permet de collecter à distance des données pour BloodHound en interrogeant LDAP.
+  BloodHound.py is a Python based ingestor for BloodHound, based on Impacket. It allows you to remotely collect data for bloodhound by querying LDAP
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
 command: |
-  bloodhound.py -d <domain.local> -v --zip -c All -dc <domain.local> -ns <IP>
+  bloodhound.py -d test.local -v --zip -c All -dc test.local -ns 10.10.10.1
 items:
   - No_Creds
 services:
