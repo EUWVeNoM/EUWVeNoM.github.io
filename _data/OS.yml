@@ -15,6 +15,6 @@ Testing-tool:
   label: Testing-tool
   description: L'outil est en phase de test.
 
-New:
+New-tool:
   label-tool: New-tool
   description: L'outil est tout nouveau.
