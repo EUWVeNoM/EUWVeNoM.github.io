@@ -1,8 +1,4 @@
 ---
-General:
-  label: General
-  description: Commande pour vous aider dans les activités courantes.
-
 OSINT:
   label: OSINT
   description: Commande pour vous aider sur la collecte de renseignements d'origine sources ouvertes.
