@@ -6,7 +6,7 @@ exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md']
 permalink: pretty
 
 collections:
-  hackmurerie:
+  wadcoms:
     output: true
 
 defaults:
