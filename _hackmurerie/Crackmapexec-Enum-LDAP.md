@@ -1,24 +1,20 @@
 ---
 description: |
-  "CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks." - https://github.com/byt3bl33d3r/CrackMapExec/wiki. This command will enumerate domain groups, local groups, users, user descriptions, users trusted for delegation, users without a password, You can also use CIDR notation to target a range of ip addresses (i.e. 10.10.10.0/24).
+  "CrackMapExec (alias CME) est un outil de post-exploitation qui permet d'automatiser l'évaluation de la sécurité des grands réseaux Active Directory." - https://github.com/mpgn/CrackMapExec/wiki. Cette commande énumère les groupes de domaine, les groupes locaux, les utilisateurs, les descriptions d'utilisateurs, les utilisateurs autorisés pour la délégation, les utilisateurs sans mot de passe, Vous pouvez également utiliser la notation CIDR pour cibler une plage d'adresses IP (i.e. <IP>/24).
 
   Command Reference:
 
-  	Target IP: 10.10.10.1
+  	Target IP: <IP>
 
-  	Username: john
+  	Username: <user>
 
-  	Password: password123
-
-  	Hash (-H):  807726fcf9f188adc26eeafd7dc16bb7
-
+  	Password: <passwd>
 
 command: |
-  crackmapexec ldap 10.10.10.1 -u 'john' -p 'password123' --trusted-for-delegation  --password-not-required --admin-count --users --groups
+  crackmapexec ldap <IP> -u '<user>' -p '<passwd>' --trusted-for-delegation  --password-not-required --admin-count --users --groups
 items:
   - Username
   - Password
-  - Hash
 services:
   - LDAP
 attack_types:
@@ -26,6 +22,6 @@ attack_types:
 OS:
   - Linux
 references:
-  - https://github.com/byt3bl33d3r/CrackMapExec
-  - https://github.com/byt3bl33d3r/CrackMapExec/wiki
+  - https://github.com/mpgn/CrackMapExec
+  - https://github.com/mpgn/CrackMapExec/wiki
 ---

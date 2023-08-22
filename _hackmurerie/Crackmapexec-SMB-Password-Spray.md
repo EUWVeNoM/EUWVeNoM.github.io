@@ -1,28 +1,26 @@
 ---
 description: |
-  "CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks." - https://github.com/byt3bl33d3r/CrackMapExec/wiki. This command will perform password/user spraying over SMB against the domain controller.
+  "CrackMapExec (alias CME) est un outil de post-exploitation qui permet d'automatiser l'évaluation de la sécurité des grands réseaux Active Directory." - https://github.com/mpgn/CrackMapExec/wiki. Cette commande permet de pulvériser les mots de passe via SMB sur le contrôleur de domaine.
 
   Command Reference:
 
-  	Domain Controller IP: 10.10.10.1
+  	Domain Controller IP: <IP>
 
-  	Username List: users.txt
+  	Username List: <dict>
 
-  	Password: password123 /password.txt
+  	Password: <passwd>
 
 command: |
-  crackmapexec smb 10.10.10.1 -u users.txt -p password123
+  crackmapexec smb <IP> -u <dict> -p <passwd>
 items:
   - Username
-  - Password
 services:
   - SMB
 attack_types:
   - Exploitation
-  - Enumeration
 OS:
   - Linux
 references:
-  - https://github.com/byt3bl33d3r/CrackMapExec
-  - https://github.com/byt3bl33d3r/CrackMapExec/wiki
+  - https://github.com/mpgn/CrackMapExec
+  - https://github.com/mpgn/CrackMapExec/wiki
 ---

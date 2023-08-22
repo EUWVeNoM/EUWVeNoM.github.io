@@ -13,7 +13,7 @@ command: |
 items:
   - No_Creds
 services:
-  - Web
+  - HTTP
 attack_types:
   - Enumeration
 OS:

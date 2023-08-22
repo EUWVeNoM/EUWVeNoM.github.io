@@ -1,23 +1,20 @@
 ---
 description: |
-  Evil-WinRM uses the Windows Management Instrumentation (WMI) to give you an interactive shell on the Windows host.
+  Evil-WinRM utilise l'instrumentation de gestion Windows (WMI) pour vous donner un shell interactif sur l'hôte Windows.
 
   Command Reference:
 
-  	Target IP: 10.10.10.1
+  	Target IP: <IP>
 
-  	Username: john
+  	Username: <user>
 
-  	Password: password123
-
-  	Hash (-H):  807726fcf9f188adc26eeafd7dc16bb7
+  	Password: <passwd>
 
 command: |
-  evil-winrm -i 10.10.10.1 -u john -p password123
+  evil-winrm -i <IP> -u <user> -p <passwd>
 items:
   - Password
   - Username
-  - Hash
 services:
   - WMI
 OS:
@@ -25,7 +22,6 @@ OS:
   - Windows
 attack_types:
   - Exploitation
-  - Persistence
 references:
   - https://github.com/Hackplayers/evil-winrm
 ---

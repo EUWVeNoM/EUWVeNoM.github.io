@@ -1,19 +1,19 @@
 ---
 description: |
-  SMBMap is a tool used to enumerate SMB share drives, including listing share drive permissions, share contents, upload/download functionality, file name enumeration, and remote command execution. The following command will enumerate a list of SMB hosts for files and filenames containing the keyword 'password'.
+  SMBMap est un outil utilisé pour énumérer les lecteurs partagés SMB, y compris la liste des autorisations des lecteurs partagés, le contenu des partages, la fonctionnalité de téléchargement, l'énumération des noms de fichiers et l'exécution de commandes à distance. La commande suivante permet d'énumérer une liste d'hôtes SMB à la recherche de fichiers et de noms de fichiers contenant le mot-clé `password`.
 
   Command Reference:
 
-  	Domain: test.local
+  	Domain: <domain.local>
 
-  	SMB Hosts: smb-hosts.txt
+  	SMB Hosts: <smb-hosts.txt>
 
-  	Username: john
+  	Username: <user>
 
-  	Password: password123
+  	Password: <passwd>
 
 command: |
-  python3 smbmap.py --host-file smb-hosts.txt -u john -p 'password123' -d test.local -F password
+  python3 smbmap.py --host-file <smb-hosts.txt> -u <user> -p '<passwd>' -d <domain.local> -F password
 items:
   - Username
   - Password

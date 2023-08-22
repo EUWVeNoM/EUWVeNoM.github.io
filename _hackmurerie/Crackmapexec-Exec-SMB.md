@@ -1,31 +1,27 @@
 ---
 description: |
-  "CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks." - https://github.com/byt3bl33d3r/CrackMapExec/wiki. This command will execute a powershell command on the target machine if the user has Administrator privileges. using "-x" will execute from cmd.
+  "CrackMapExec (alias CME) est un outil de post-exploitation qui permet d'automatiser l'évaluation de la sécurité des grands réseaux Active Directory." - https://github.com/mpgn/CrackMapExec/wiki. Cette commande exécute une commande powershell sur la machine cible si l'utilisateur dispose des privilèges d'administrateur. L'utilisation de "-x" permet d'exécuter la commande à partir de cmd.
 
   Command Reference:
 
-  	Target IP: 10.10.10.1
+  	Target IP: <IP>
 
-  	Username: john
+  	Username: <user>
 
-  	Password: password123
-
-  	Hash (-H):  807726fcf9f188adc26eeafd7dc16bb7
+  	Password: <passwd>
 
 command: |
-  crackmapexec smb 10.10.10.1 -u 'john' -p 'password123' -X 'whoami'
+  crackmapexec smb <IP> -u '<user>' -p '<passwd>' -X '$Host'
 items:
   - Username
   - Password
-  - Hash
 services:
   - SMB
 attack_types:
   - Exploitation
-  - Persistence
 OS:
   - Linux
 references:
-  - https://github.com/byt3bl33d3r/CrackMapExec
-  - https://github.com/byt3bl33d3r/CrackMapExec/wiki
+  - https://github.com/mpgn/CrackMapExec
+  - https://github.com/mpgn/CrackMapExec/wiki
 ---
