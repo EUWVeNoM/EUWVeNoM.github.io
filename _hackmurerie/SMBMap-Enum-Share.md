@@ -4,16 +4,16 @@ description: |
 
   Command Reference:
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	SMB Hosts: <smb-hosts.txt>
+  	SMB Hosts: smb-hosts.txt
 
-  	Username: <user>
+  	Username: john
 
-  	Password: <passwd>
+  	Password: password123
 
 command: |
-  python3 smbmap.py --host-file <smb-hosts.txt> -u <user> -p '<passwd>' -d <domain.local> -L
+  python3 smbmap.py --host-file smb-hosts.txt -u john -p 'password123' -d test.local -L
 items:
   - Username
   - Password

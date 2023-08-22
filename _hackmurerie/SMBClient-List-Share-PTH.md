@@ -1,19 +1,19 @@
 ---
 description: |
-  Smbclient est un outil utilisé pour communiquer avec les serveurs SMB. La commande suivante énumère tous les partages disponibles sur l'ip cible en utilisant le hash de l'utilisateur <user> sur le domaine de <domain.local>.
+  Smbclient is a tool used to communicate with SMB servers. The following command will list out all available shares on the target ip using user John hash on test domain.
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	Username: <user>
+  	Username: john
 
-  	Hash: <hash>
+  	Hash: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 command: |
-  smbclient -L \\<IP> -U <domain.local>/<user> --pw-nt-hash <hash>
+  smbclient -L \\10.10.10.1 -U test.local/john --pw-nt-hash XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 items:
   - Username
   - Hash

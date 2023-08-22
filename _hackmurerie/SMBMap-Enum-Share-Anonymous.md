@@ -1,15 +1,15 @@
 ---
 description: |
-  SMBMap est un outil utilisé pour énumérer les lecteurs partagés SMB, y compris la liste des autorisations des lecteurs partagés, le contenu des partages, la fonctionnalité de téléchargement, l'énumération des noms de fichiers et l'exécution de commandes à distance. La commande suivante permet d'énumérer une liste d'hôtes SMB pour les partages SMB accessibles, qu'il s'agisse de lecteurs locaux ou mappés, sans informations d'identification (session nulle).
+  SMBMap is a tool used to enumerate SMB share drives, including listing share drive permissions, share contents, upload/download functionality, file name enumeration, and remote command execution. The following command will enumerate a list of SMB hosts for accessible SMB shares, both local and mapped drives, without credentials (null session).
 
   Command Reference:
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	SMB Hosts: <smb-hosts.txt>
+  	SMB Hosts: smb-hosts.txt
 
 command: |
-  python3 smbmap.py --host-file <smb-hosts.txt> -d <domain.local> -L
+  python3 smbmap.py --host-file smb-hosts.txt -d test.local -L
 items:
   - No_Creds
 services:

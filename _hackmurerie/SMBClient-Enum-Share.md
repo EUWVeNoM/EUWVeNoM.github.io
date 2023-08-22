@@ -1,21 +1,21 @@
 ---
 description: |
-  Smbclient est un outil utilisé pour communiquer avec les serveurs SMB. La commande suivante permet de se connecter à un partage SMB `<C$>` en utilisant des informations d'identification valides.
+  Smbclient is a tool used to communicate with SMB servers. The following command will connect to an SMB share `C$` using valid credentials.
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	SMB Share: <C$>
+  	SMB Share: C$
 
-  	Username: <user>
+  	Username: john
 
-  	Password: <passwd>
+  	Password: password123
 
 command: |
-  smbclient \\\\<domain.local>\\<C$> -I <IP> -U <user> <passwd>
+  smbclient \\\\test.local\\C$ -I 10.10.10.1 -U john password123
 items:
   - Username
   - Password

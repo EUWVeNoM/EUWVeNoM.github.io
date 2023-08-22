@@ -1,15 +1,15 @@
 ---
 description: |
-  winpeas.exe est un script qui recherche tous les chemins possibles pour élever les privilèges sur les hôtes Windows. La commande ci-dessous exécute toutes les vérifications de priv esc et stocke les résultats dans un fichier.
+  winpeas.exe is a script that will search for all possible paths to escalate privileges on Windows hosts. The below command will run all priv esc checks and store the output in a file.
 
   Command Reference:
 
   	Run all checks: cmd
 
-  	Output File: <file>
+  	Output File: output.txt
 
 command: |
-  winpeas.exe cmd > <file>
+  winpeas.exe cmd > output.txt
 items:
   - Shell
 OS:
@@ -17,6 +17,7 @@ OS:
 attack_types:
   - PrivEsc
 references:
-  - https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS
+  - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS
+  - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/master/winPEAS/winPEASexe/README.md
   - https://book.hacktricks.xyz/windows/windows-local-privilege-escalation
 ---

@@ -1,19 +1,19 @@
 ---
 description: |
-  Smbclient est un outil utilisé pour communiquer avec les serveurs SMB. La commande suivante énumère tous les partages disponibles sur le serveur cible à l'aide d'informations d'identification valides.
+  Smbclient is a tool used to communicate with SMB servers. The following command will list out all available shares on the target server using valid credentials.
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	Username: <user>
+  	Username: john
 
-  	Password: <passwd>
+  	Password: password123
 
 command: |
-  smbclient -L \\<domain.local> -I <IP> -U <user> <passwd>
+  smbclient -L \\test.local -I 10.10.10.1 -U john password123
 items:
   - Username
   - Password

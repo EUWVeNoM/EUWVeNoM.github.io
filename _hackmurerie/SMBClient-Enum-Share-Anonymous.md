@@ -1,17 +1,17 @@
 ---
 description: |
-  Smbclient est un outil utilisé pour communiquer avec les serveurs SMB. La commande suivante permet de se connecter à un partage SMB `<public>` en utilisant un login anonyme.
+  Smbclient is a tool used to communicate with SMB servers. The following command will connect to an SMB share `public` using anonymous login.
 
   Command Reference:
 
-  	Target IP: <IP>
+  	Target IP: 10.10.10.1
 
-  	Domain: <domain.local>
+  	Domain: test.local
 
-  	SMB Share: <public>
+  	SMB Share: public
 
 command: |
-  smbclient \\\\<domain.local>\\<public> -I <IP> -N
+  smbclient \\\\test.local\\public -I 10.10.10.1 -N
 items:
   - No_Creds
 services:
