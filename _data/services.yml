@@ -46,15 +46,3 @@ ADCS:
 Web:
   label: Web
   description: Les commandes/charges utiles concernent les serveurs web.
-
-Approved:
-  label: Approved
-  description: L'outil est approuvé.
-
-Testing:
-  label: Testing
-  description: L'outil est en phase de test.
-
-New:
-  label-tool: New
-  description: L'outil est tout nouveau.

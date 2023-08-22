@@ -6,3 +6,15 @@ Linux:
 Windows:
   label: Windows
   description: La commande peut être exécutée sous Windows.
+
+Approved-tool:
+  label: Approved-tool
+  description: L'outil est approuvé.
+
+Testing-tool:
+  label: Testing-tool
+  description: L'outil est en phase de test.
+
+New-tool:
+  label: New-tool
+  description: L'outil est tout nouveau.
