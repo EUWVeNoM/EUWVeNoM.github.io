@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Items
+title: Approved
 ---
 
-Vous trouverez ci-dessous la liste des items :
+Below is the list of items:
 
 {% include items_description.html %}

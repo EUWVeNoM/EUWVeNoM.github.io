@@ -3,6 +3,6 @@ layout: page
 title: Filters
 ---
 
-Below is the list of filters:
+Vous trouverez ci-dessous la liste des filtres :
 
 {% include filters_description.html %}
