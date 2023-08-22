@@ -1,7 +1,9 @@
 # Hackmurerie
-Hackmurerie est un Cheat Sheet interactive, contenant une liste d'outils de sécurité offensifs et leurs commandes respectives, à utiliser contre les environnements Windows/AD et Linux.
+Hackmurerie est une boîte à outils RedTeam. C'est une cheat sheet interactive contenant une liste utile d'outils de sécurité offensifs et leurs commandes/payload respectives, à utiliser dans les exercices de red teaming.
 
-Retrouvez le projet à l'adresse suivante : https://github.com/EUWVeNoM/EUWVeNoM.github.io
+Si, comme moi, vous détestez chercher constamment la bonne commande à utiliser contre un environnement Windows, Linux ou Active Directory, ce projet devrait vous soulager un peu. Il suffit de sélectionner les informations dont vous disposez sur la machine victime (mots de passe, noms d'utilisateur, services, etc.), et une liste d'outils que vous pouvez essayer contre la machine s'affichera, ainsi qu'un modèle de commande pour faciliter le copier/coller
+
+Retrouvez le projet à l'adresse suivante : https://euwvenom.github.io/
 
 Created by [Venom](https://twitter.com/EuwVenom)
 
