@@ -19,7 +19,7 @@ services:
 OS:
   - Linux
 attack_types:
-  - New_Tool
+  - New
 references:
   - https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
   - https://www.madirish.net/59

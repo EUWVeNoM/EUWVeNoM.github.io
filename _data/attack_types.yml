@@ -20,13 +20,13 @@ PrivEsc:
   description: La commande se concentre sur l'escalade des privilèges.
 
 Approved:
-  label: Approved_Tool
+  label: Approved
   description: L'outil est approuvé.
 
 Testing:
-  label: Testing_Tool
+  label: Testing
   description: L'outil est en phase de test.
 
 New:
-  label: New_Tool
+  label: New
   description: L'outil est tout nouveau.
