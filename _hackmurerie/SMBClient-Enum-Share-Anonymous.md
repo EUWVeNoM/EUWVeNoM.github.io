@@ -18,7 +18,7 @@ services:
   - SMB
 OS:
   - Linux
-  - New-tool
+  - New
 attack_types:
   - Enumeration
 references:
