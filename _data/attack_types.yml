@@ -1,20 +1,36 @@
 ---
+General:
+  label: General
+  description: Commande pour vous aider dans les activités courantes.
+
 OSINT:
   label: OSINT
-  description: La commande se concentre sur les renseignements d'origine sources ouvertes.
+  description: Commande pour vous aider sur la collecte de renseignements d'origine sources ouvertes.
 
 Enumeration:
   label: Enumeration
-  description: La commande se concentre sur l'énumération.
+  description: Commande pour vous aider sur l'énumération.
 
 Exploitation:
   label: Exploitation
-  description: La commande se concentre sur l'exploitation.
+  description: Commande pour vous aider sur l'exploitation.
 
 Persistence:
   label: Persistence
-  description: La commande se concentre sur la persistance.
+  description: Commande pour vous aider sur la persistance.
   
 PrivEsc:
   label: Privilege Escalation
-  description: La commande se concentre sur l'escalade des privilèges.
+  description: Commande pour vous aider sur l'escalade des privilèges.
+
+Cracking:
+  label: Cracking
+  description: Commande pour vous aider à craquer toutes sortes de choses.
+
+Injection:
+  label: Injection
+  description: Commande/payload pour injecter des éléments dans la victime.
+
+Bypassing:
+  label: Bypassing
+  description: Commande/code permettant de contourner l'antivirus ou l'AMSI.

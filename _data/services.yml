@@ -23,6 +23,10 @@ LDAP:
   label: LDAP
   description: Le service LDAP est ouvert et vous devez savoir ce que vous pouvez en faire.
 
+SSH:
+  label: SSH
+  description: Vous avez trouvé le service SSH ouvert et vous voulez savoir ce que vous pouvez faire avec.
+  
 NTLM:
   label: NTLM
   description: La commande concerne le protocole NTLM.
@@ -31,6 +35,14 @@ DNS:
   label: DNS
   description: La commande concerne le service DNS.
 
-HTTP:
-  label: HTTP
-  description: La commande concerne le service HTTP.
+AV:
+  label: Antivirus
+  description: La commande/payload concerne le contournement de l'AV/AMSI.
+
+ADCS:
+  label: ADCS
+  description: La commande/charge de travail concerne les services de certification Active Directory.
+
+Web:
+  label: Web
+  description: Les commandes/charges utiles concernent les serveurs web.
