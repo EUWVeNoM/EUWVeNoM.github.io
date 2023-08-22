@@ -19,6 +19,7 @@ services:
 OS:
   - Linux
 attack_types:
+  - Enumeration
   - New
 references:
   - https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
