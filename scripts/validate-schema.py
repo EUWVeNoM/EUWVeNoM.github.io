@@ -14,7 +14,6 @@ def build_schema():
     item_names = next(parse_yaml('_data/items.yml')).keys()
     OS_names = next(parse_yaml('_data/OS.yml')).keys()
     attack_names = next(parse_yaml('_data/attack_types.yml')).keys()
-    approved_names = next(parse_yaml('_data/approved.yml')).keys()
     return {
         "definitions": {
             'examples': {
@@ -62,19 +61,8 @@ def build_schema():
                 },
                 'additionalProperties': False
             },
-            'approved': {
-                'type': 'array',
-                "patternProperties": {
-                    '^({})$'.format('|'.join(approved_names)): {'$ref': '#/definitions/examples'}
-                },
-                'additionalProperties': False
-            },
-            'references': {
-                'type': 'array',
-                'additionalProperties': False
-            }
         },
-        'required': ['items', 'command', 'OS', 'references', 'approved'],
+        'required': ['items', 'command', 'OS', 'references'],
         'additionalProperties': False
     }
 
