@@ -6,11 +6,11 @@ exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md']
 permalink: pretty
 
 collections:
-  wadcoms:
+  hackmurerie:
     output: true
 
 defaults:
   - scope:
-      path: '_wadcoms'
+      path: '_hackmurerie'
     values:
       layout: bin

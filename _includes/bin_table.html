@@ -42,7 +42,7 @@
 
 </div>
 <div style="margin-top: -20px;">
-<input id="bin-search" type="text" placeholder="Search among {{ site.wadcoms | size }} commands: <command> +<filter> ..."/>
+<input id="bin-search" type="text" placeholder="Search among {{ site.hackmurerie | size }} commands: <command> +<filter> ..."/>
 </div>
 
 <div id="bin-table-wrapper">
@@ -53,7 +53,7 @@
             </tr>
         </thead>
         <tbody>
-	    {% assign sites = site.wadcoms | reverse %} 
+	    {% assign sites = site.hackmurerie | reverse %} 
             {% for file in sites %}
             <tr>
 		    <td><div class="bin-name"><div style="flex: 0 0 97%"><a href="{{ file.url }}" id="{{ file.url }}" style="text-decoration: none; color: DarkGreen;">{{ file.command | escape }}</a></div><div style="flex: 1;"><a href="javascript:void(0)" onClick="copyFunction('{{ file.url }}')"><img src="/assets/copy-button.svg" alt="Copy" title="Copy" id="{{ file.url }}_img"/></a></div></div><p style="margin-top: -12px;">{% include filter_list.html bin=file %}</p></td>
@@ -72,7 +72,7 @@
 		var copyCommand = document.getElementById(file_url);
    
 		navigator.clipboard.writeText(copyCommand.innerText).then(() => {
-			{% for file in site.wadcoms %}
+			{% for file in site.hackmurerie %}
 			document.getElementById("{{ file.url }}_img").alt = "Copy";
 			document.getElementById("{{ file.url }}_img").title = "Copy";
 			{% endfor %}
