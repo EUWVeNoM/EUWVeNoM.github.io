@@ -1,17 +1,17 @@
 ---
 description: |
-  Certipy is an offensive tool for enumerating and abusing Active Directory Certificate Services (AD CS). The find command is useful for enumerating AD CS certificate templates, certificate authorities and other configurations.
+  Certipy est un outil offensif permettant d'énumérer et d'abuser des services de certificats Active Directory (AD CS). La commande find est utile pour énumérer les modèles de certificats AD CS, les autorités de certification et d'autres configurations.
 
   Command Reference:
-  ```
-  User: e.black
 
-  Password: ypOSJXPqlDOxxbQSfEERy300
+    Target IP: <IP>
 
-  IP address: 10.129.239.91
-  ```
+  	Username: <user>
+
+  	Password: <passwd>
+    
 command: |
-  certipy find -u e.black -p ypOSJXPqlDOxxbQSfEERy300 -dc-ip 10.129.239.91
+  certipy find -u <user> -p <passwd> -dc-ip <IP>
 
 code: |
     Check following properties in templates, makes them vulnerable for ESC1.
@@ -30,6 +30,7 @@ services:
   - LDAP
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

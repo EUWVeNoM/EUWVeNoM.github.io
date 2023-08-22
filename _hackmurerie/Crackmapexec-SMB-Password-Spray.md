@@ -20,6 +20,7 @@ attack_types:
   - Exploitation
 OS:
   - Linux
+  - Approved-tool
 references:
   - https://github.com/mpgn/CrackMapExec
   - https://github.com/mpgn/CrackMapExec/wiki

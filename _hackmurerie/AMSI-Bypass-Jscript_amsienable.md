@@ -1,6 +1,6 @@
 ---
 description: |
-  In this Amsi Bypass it sets the HKCU\Software\Microsoft\Windows Script\Settings\AmsiEnable registry key to 0 and run the evil script. Add the code at the beginning of your evil Jscript file to turn off the AMSI.
+  Dans ce contournement de l'AMSI, la clé de registre HKCU\Software\Microsoft\Windows Script\Settings\AmsiEnable est réglée sur 0 et le script malveillant est exécuté. Ajoutez le code au début de votre fichier Jscript malveillant pour désactiver l'AMSI.
 
   Command Reference:
   ```
@@ -34,6 +34,7 @@ services:
   - AV
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Bypassing
 references:

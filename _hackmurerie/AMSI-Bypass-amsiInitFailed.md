@@ -1,6 +1,6 @@
 ---
 description: |
-  One-liner to bypass the AMSI in a Powershell. Manipulating a result variable set by AmsiInitialize can also lead to another AMSI bypass through the amsiInitFailed field.
+  One-liner pour contourner l'AMSI dans un Powershell. La manipulation d'une variable de résultat définie par AmsiInitialize peut également conduire à un autre contournement de l'AMSI via le champ amsiInitFailed.
 
   Command Reference:
   ```
@@ -21,6 +21,7 @@ services:
   - AV
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Bypassing
 references:

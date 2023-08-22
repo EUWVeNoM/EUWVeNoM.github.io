@@ -28,6 +28,7 @@ attack_types:
   - Persistence
 OS:
   - Linux
+  - Approved-tool
 references:
   - https://github.com/byt3bl33d3r/CrackMapExec
   - https://github.com/byt3bl33d3r/CrackMapExec/wiki

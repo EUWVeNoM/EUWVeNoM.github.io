@@ -1,6 +1,6 @@
 ---
 description: |
-  With this code in Powershell it is possible to bypass the AMSI. We’ll modify the assembly instructions themselves instead of the data they are acting upon in a technique known as binary patching. We can use this technique to hotpatch the code and force it to fail even if the data structure is valid. This is done by overwriting the 3 Bytes TEST RDX,RDX with an XOR RAX,RAX instruction, forcing the execution flow to the error branch, which will disable AMSI.
+  Avec ce code dans Powershell, il est possible de contourner l'AMSI. Nous modifierons les instructions d'assemblage elles-mêmes au lieu des données sur lesquelles elles agissent dans une technique connue sous le nom de patching binaire. Nous pouvons utiliser cette technique pour corriger le code et le forcer à échouer même si la structure de données est valide. Pour ce faire, nous remplaçons les 3 octets TEST RDX,RDX par une instruction XOR RAX,RAX, ce qui force le flux d'exécution à passer par la branche d'erreur, qui désactive l'AMSI.
 
   Command Reference:
   ```
@@ -55,6 +55,7 @@ services:
   - AV
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Bypassing
 references:

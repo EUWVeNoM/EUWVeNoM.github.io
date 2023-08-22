@@ -26,6 +26,7 @@ attack_types:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 references:
   - https://github.com/BloodHoundAD/BloodHound
   - https://github.com/fox-it/BloodHound.py

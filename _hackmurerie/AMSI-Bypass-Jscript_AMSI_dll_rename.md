@@ -1,6 +1,6 @@
 ---
 description: |
-  In this Amsi Bypass it copies C:\Windows\System32\wscript.exe binary to a different location and rename in to AMSI.dll in order to prevent loading the real AMSI.dll. Add the code at the beginning of your evil Jscript file to turn off the AMSI.
+  Dans ce contournement de l'AMSI, le binaire C:\NWindows\NSystem32\Nwscript.exe est copié dans un autre emplacement et renommé en AMSI.dll afin d'empêcher le chargement du véritable AMSI.dll. Ajoutez le code au début de votre fichier Jscript maléfique pour désactiver l'AMSI.
 
   Command Reference:
   ```
@@ -38,6 +38,7 @@ services:
   - AV
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Bypassing
 references:

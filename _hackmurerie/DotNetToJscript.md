@@ -1,14 +1,13 @@
 ---
 description: |
-  The DotNetToJscript project demonstrated how to execute C# assembly from Jscript. Build entire solution and in order to work with DotNetToJscript we need to have the following files on the target machine:
+  Le projet DotNetToJscript a démontré comment exécuter un assemblage C# à partir de Jscript. Construisez la solution complète et pour travailler avec DotNetToJscript, nous devons avoir les fichiers suivants sur la machine cible :
 
   Command Reference:
-  ```
-  DotNetToJscript.exe
-  NDesk.Options.dll
-  ExampleAssembly.dll: output from C# solution, hold the C# assembly of what the code needs to do.
 
-  ```
+    DotNetToJscript.exe
+    NDesk.Options.dll
+    ExampleAssembly.dll: output from C# solution, hold the C# assembly of what the code needs to do.
+
 command: |
   .\DotNetToJScript.exe .\ExampleAssembly.dll --lang=Jscript --ver=v4 -o demo.js
 
@@ -53,6 +52,7 @@ services:
   
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Injection
 references:

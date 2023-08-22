@@ -1,20 +1,19 @@
 ---
 description: |
-  Chisel creates encrypted tunnels between computers, allowing secure communication over untrusted networks. Proxychains tunnels traffic through proxies, obfuscating its origin. Together, they offer an added layer of security and privacy. Chisel also allows for port forwarding, forwarding a port on a local machine to a remote one, useful for accessing services on a remote machine that's not directly accessible. This combination of tools can provide flexibility and functionality while ensuring secure and private communication.
+  Chisel crée des tunnels chiffrés entre ordinateurs, permettant une communication sécurisée sur des réseaux non fiables. Proxychains fait passer le trafic par des proxys, ce qui permet d'en dissimuler l'origine. Ensemble, ils offrent une couche supplémentaire de sécurité et de confidentialité. Chisel permet également la redirection de port, c'est-à-dire la redirection d'un port d'une machine locale vers une machine distante, ce qui est utile pour accéder à des services sur une machine distante qui n'est pas directement accessible. Cette combinaison d'outils peut offrir flexibilité et fonctionnalité tout en garantissant une communication sécurisée et privée.
 
   Command Reference:
-  ```
-  8000: port on machine on which the chisel server will be started
 
-  server/client: role which the chisel should take
+    8000: port on machine on which the chisel server will be started
 
-  10.10.21.16: IP address of attacking machine
+    server/client: role which the chisel should take
 
-  localhost/172.16.22.1: IP address for pointing the port to, localhost for port on victim machine. Or IP address of machine which is one hop further in the network (172.16.22.1, DC).
+    10.10.21.16: IP address of attacking machine
 
-  9050: port on which proxychains is running
+    localhost/172.16.22.1: IP address for pointing the port to, localhost for port on victim machine. Or IP address of machine which is one hop further in the network (172.16.22.1, DC).
 
-  ```
+    9050: port on which proxychains is running
+
 command: |
   ./chisel_1.8.1_linux_amd64 server -p 8000 --reverse
 
@@ -33,6 +32,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Persistence
   - General
