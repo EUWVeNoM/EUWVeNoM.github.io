@@ -18,15 +18,3 @@ Persistence:
 PrivEsc:
   label: Privilege Escalation
   description: La commande se concentre sur l'escalade des privilèges.
-
-Approved:
-  label: Approved
-  description: L'outil est approuvé.
-
-Testing:
-  label: Testing
-  description: L'outil est en phase de test.
-
-New:
-  label: New
-  description: L'outil est tout nouveau.

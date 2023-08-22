@@ -18,9 +18,9 @@ services:
   - SMB
 OS:
   - Linux
+  - New
 attack_types:
   - Enumeration
-  - New
 references:
   - https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
   - https://www.madirish.net/59
