@@ -18,7 +18,9 @@ services:
   - SMB
 OS:
   - Linux
-  - Windows
+  - Approved_Tool
+  - Testing_Tool
+  - New_Tool
 attack_types:
   - Enumeration
 references:

@@ -7,14 +7,14 @@ Windows:
   label: Windows
   description: La commande peut être exécutée sous Windows.
 
-Tool pproved:
-  label: Approved
+Approved:
+  label: Approved_Tool
   description: L'outil est approuvé.
 
-Tool Testing:
-  label: Testing
+Testing:
+  label: Testing_Tool
   description: L'outil est en phase de test.
 
-New Tool:
-  label: New
+New:
+  label: New_Tool
   description: L'outil est tout nouveau.
