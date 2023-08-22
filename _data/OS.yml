@@ -8,13 +8,13 @@ Windows:
   description: La commande peut être exécutée sous Windows.
 
 Approved-tool:
-  label: Approved-tool
+  label: Approved
   description: L'outil est approuvé.
 
 Testing-tool:
-  label: Testing-tool
+  label: Testing
   description: L'outil est en phase de test.
 
 New-tool:
-  label-tool: New-tool
+  label-tool: New
   description: L'outil est tout nouveau.
