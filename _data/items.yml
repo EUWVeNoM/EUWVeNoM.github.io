@@ -30,15 +30,3 @@ PFX:
 Shell:
   label: Shell
   description: Vous avez un shell sur un hôte et vous voulez savoir ce que vous pouvez faire.
-
-Approved:
-  label: Approved_Tool
-  description: L'outil est approuvé.
-
-Testing:
-  label: Testing_Tool
-  description: L'outil est en phase de test.
-
-New:
-  label: New_Tool
-  description: L'outil est tout nouveau.
