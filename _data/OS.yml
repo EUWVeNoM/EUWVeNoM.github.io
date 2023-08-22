@@ -18,3 +18,7 @@ Testing:
 New:
   label-tool: New
   description: L'outil est tout nouveau.
+
+New2:
+  label-tool: New2
+  description: L'outil est tout nouveau.
