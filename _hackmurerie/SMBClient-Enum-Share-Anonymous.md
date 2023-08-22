@@ -14,6 +14,9 @@ command: |
   smbclient \\\\<domain.local>\\<public> -I <IP> -N
 items:
   - No_Creds
+  - Approved_Tool
+  - Testing_Tool
+  - New_Tool
 services:
   - SMB
 OS:
@@ -23,6 +26,9 @@ OS:
   - New_Tool
 attack_types:
   - Enumeration
+  - Approved_Tool
+  - Testing_Tool
+  - New_Tool
 references:
   - https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
   - https://www.madirish.net/59
