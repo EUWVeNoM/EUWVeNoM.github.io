@@ -1,14 +1,14 @@
 <style>
-	.selected {
-		color: #ff0000 !important;
-		border-color: #ff0000 !important;
-	}
+.selected {
+	color: #ff0000 !important;
+	border-color: #ff0000 !important;
+}
 </style>
 
 <div id="bin-search-wrapper">
 
     <ul id="bin-search-filters" class="filter-list">
-	<h3>What you have:</h3>
+	<h3>Ce que vous avez :</h3>
 	{% for item_pair in site.data.items %}
 	{% assign item_id = item_pair[0] %}
 	{% assign item = item_pair[1] %}
@@ -24,7 +24,7 @@
         {% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>Attack Type:</h3>
+	<h3>Type d'attaque :</h3>
 	{% for attack_pair in site.data.attack_types %}
 	{% assign attack_id = attack_pair[0] %}
 	{% assign attack = attack_pair[1] %}
@@ -32,18 +32,11 @@
 	{% endfor %}
     </ul>
     <ul id="bin-search-filters" class="filter-list">
-	<h3>OS:</h3>
+	<h3>OS and others:</h3>
 	{% for OS_pair in site.data.OS %}
 	{% assign OS_id = OS_pair[0] %}
 	{% assign OS = OS_pair[1] %}
 	<li><input type="checkbox" id="{{ OS.label }}" name="OS_name" onclick='handleChange(this, "{{ OS.label }}");'><label id="{{ OS.label }}_label" for="{{ OS.label }}" data-title="{{ OS.description | replace: '\n', ' ' }}">{{ OS.label }}</label></li>
-	{% endfor %}
-    </ul>
-	<h3>Approved:</h3>
-	{% for approved_pair in site.data.approved %}
-	{% assign approved_id = approved_pair[0] %}
-	{% assign approved = v_pair[1] %}
-	<li><input type="checkbox" id="{{ approved.label }}" name="approved_name" onclick='handleChange(this, "{{ approved.label }}");'><label id="{{ approved.label }}_label" for="{{ approved.label }}" data-title="{{ approved.description | replace: '\n', ' ' }}">{{ approved.label }}</label></li>
 	{% endfor %}
     </ul>
 
@@ -56,7 +49,7 @@
     <table id="bin-table">
         <thead>
             <tr>
-                <th>Command</th>
+                <th>Commandes</th>
             </tr>
         </thead>
         <tbody>
@@ -72,261 +65,247 @@
 
 <script>
 
-	function copyFunction(file_url) {
-		var copyCommand = document.getElementById(file_url);
-   
-		navigator.clipboard.writeText(copyCommand.innerText).then(() => {
-			{% for file in site.hackmurerie %}
-			document.getElementById("{{ file.url }}_img").alt = "Copy";
-			document.getElementById("{{ file.url }}_img").title = "Copy";
-			{% endfor %}
-			document.getElementById(file_url + "_img").alt = "Copied";
-			document.getElementById(file_url + "_img").title = "Copied";
-		}, () => {
-			console.log("copy failed");
-		});
-   
-	}
-   
-	function handleChange(checkbox, label) {
-		if (checkbox.checked == true) {
-			document.getElementById(label).className = 'match';
-			document.getElementById(label + "_label").innerText = label + "✓";
-			var slash = window.location.href.lastIndexOf("/");
-			if (window.location.href[slash+1] == "#") {
-				window.location.href+='+' + label
-			} else {
-				window.location.href+='#+' + label
-			}
-		} else {
-			document.getElementById(label).className = "";
-			document.getElementById(label + "_label").innerText = label;
-			label = label.replace(" ", "%20");
-			var new_href = window.location.href.replace("+"+label, "");
-			window.location.href = new_href;
-			if (window.location.hash == "") {
-				document.getElementById("bin-search").value = "";
-			}
-		}
-	}
-   
-	function filter(query) {
-		var queryArray = query.toLowerCase().trim().split(/ *\+/);
-		var binPattern = queryArray[0];
-		var functionPatterns = queryArray.splice(1);
-   
-		// filter rows
-		var noResults = true;
-   
-		var allItems = document.getElementsByName("item_name");
-		var allFilters = document.getElementsByName("service_name");
-		var allAttacks = document.getElementsByName("attack_name");
-		var allOS = document.getElementsByName("OS_name");
-		var allApproved = document.getElementsByName("approved_name");
-		var allItems_parsed = [];
-		var allFilters_parsed = [];
-		var allAttacks_parsed = []; 
-		var allApproved_parsed = []; 
-   
-		allFilters.forEach((f) => {
-			allFilters_parsed.push(f.id.toLowerCase());
-		});
-		var filter_chosen = functionPatterns.filter(element => allFilters_parsed.includes(element));
-		allItems.forEach((i) => {
-			allItems_parsed.push(i.id.toLowerCase());
-		});
-		var item_chosen = functionPatterns.filter(element => allItems_parsed.includes(element));
-		allAttacks.forEach((a) => {
-			allAttacks_parsed.push(a.id.toLowerCase());
-		});
-		var attack_chosen = functionPatterns.filter(element => allAttacks_parsed.includes(element));
-		allOS.forEach((o) => {
-			allOS_parsed.push(o.id.toLowerCase());
-		});
-		var os_chosen = functionPatterns.filter(element => allOS_parsed.includes(element));
-		var approved_chosen = functionPatterns.filter(element => allApproved_parsed.includes(element));
-   
-		document.querySelectorAll('#bin-table tbody tr').forEach(function (row) {
-			var show = true;
-   
-			var binName = row.children[0].firstElementChild.innerText.toLowerCase();
-			
-			var functionElems = Array.from(row.children[0].childNodes[2].children);
-		
-			if (show) {
-				functionElems.forEach((item) => {
-					item.className = '';
-				});
-			functionElems.forEach((item) => {
-				let siblings = [];
-			if (item.parentNode) {
-				let sibling = item.parentNode.firstChild;
-				while (sibling) {
-					if (sibling.nodeType == 1 && sibling !== item) {
-					siblings.push(sibling);
-				}
-					sibling = sibling.nextSibling;
-				}
-				for (i = 0; i < siblings.length; i++ ) {
-					var found = false;
-				functionPatterns.forEach((pattern) => {
-					if (!pattern) {
-						return;
-					}
-						
-					if (siblings[i].innerText.toLowerCase().startsWith(pattern.toLowerCase())) {
-						found = true;
-					}
-				});
-				if (found) {
-							siblings[i].className = 'match';
-				}
-				}
-				functionPatterns.forEach((p) => {
-					if (!p) {
-						return;
-					}
-   
-					if (item.innerText.toLowerCase().startsWith(p.toLowerCase())) {
-						item.className = 'match';
-					}
-				});
-   
-			}
-			});
-   
-			}
-		var filled = true;
-		var found_binName = false;
-			if (binName.indexOf(binPattern) !== -1 && binPattern.length !== 0) {
-			found_binName = true;
-		}
-   
-		functionElems.forEach((i) => {
-			{% for item_pair in site.data.items %}
-			{% assign item_id = item_pair[0] %}
-			{% assign item = item_pair[1] %}
-			
-			if (i.innerText.toLowerCase() == "{{ item.label | downcase }}" && i.className !== "match") {
-				filled = false;
-			}
-   
-			{% endfor %}
-		});
-   
-		var found_filter = -1;
-		if (filter_chosen.length !== 0) {
-			found_filter = 0;
-			filter_chosen.forEach((f) => {
-				functionElems.forEach((i) => {
-					if (i.innerText.toLowerCase() == f) {
-						found_filter = found_filter + 1;
-					}
-				});
-			});
-		}
-   
-		var found_attack = -1;
-		if (attack_chosen.length !== 0) {
-			found_attack = 0;
-			attack_chosen.forEach((a) => {
-				functionElems.forEach((i) => {
-					if (i.innerText.toLowerCase() == a) {
-						found_attack = found_attack + 1;
-					}
-				});
-			});
-		}
-						
-		var found_os = -1;
-		if (os_chosen.length !== 0) {
-			found_os = 0;
-			os_chosen.forEach((o) => {
-				functionElems.forEach((i) => {
-					if (i.innerText.toLowerCase() == o) {
-						found_os = found_os + 1;
-					}
-				});
-			});
-		}
+ function copyFunction(file_url) {
+	 var copyCommand = document.getElementById(file_url);
 
-		var found_approved = -1;
-		if (approved_chosen.length !== 0) {
-			found_approved = 0;
-			approved_chosen.forEach((o) => {
-				functionElems.forEach((i) => {
-					if (i.innerText.toLowerCase() == o) {
-						found_approved = found_approved + 1;
-					}
-				});
-			});
-		}
-   
-		if ((!filled && (found_attack < 1 && found_filter < 1 && found_os < 1 && found_approved < 1 && !found_binName)) || (found_attack == 0 || found_filter == 0 || found_os == 0 || found_approved == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1) || (found_approved !== approved_chosen.length && found_approved !== -1)) || (binPattern.length !== 0 && !found_binName)) {
-		   row.style.display = 'none';
-		} else {
-			   row.style.display = '';
-				noResults = false;
-		}
-   
-		if (functionPatterns.length == 0 && binPattern.length == 0) {
-			   row.style.display = '';
-				noResults = false;
-		}
-   
-		});
-   
-		// update the search message visibility
-		//var searchMessage = document.getElementById('search-message');
-		//searchMessage.style.display = noResults ? 'table-cell' : 'none';
-	}
-   
-	function applyFilter() {
-		// filter on load according to the URL
-		var searchBox = document.getElementById('bin-search');
-		var query = decodeURIComponent(location.hash.slice(1));
-		filter(query);
-		if (query) {
-			searchBox.value = query;
-		}
-	}
-   
-	function setup() {
-		var searchBox = document.getElementById('bin-search');
-   
-		// ensure height during filtering
-		var binTableWrapper = document.getElementById('bin-table-wrapper');
-		binTableWrapper.style.height = binTableWrapper.clientHeight + 'px';
-   
-		// handle user input
-		searchBox.addEventListener('input', function () {
-			var query = searchBox.value;
-			history.replaceState(null, null, encodeURI('#' + query));
-			applyFilter();
-		});
-   
-		// handle shortcuts
-		addEventListener('keydown', function (event) {
-			// focus search box on valid keydown
-			if (event.key.toLowerCase().match(/^[+a-z]$/) &&
-				!(event.ctrlKey || event.altKey || event.metaKey)) {
-				searchBox.focus();
-				searchBox.parentElement.scrollIntoView();
-			}
-			// clear filter on escape
-			else if (event.key === 'Escape') {
-				location.hash = searchBox.value = '';
-				searchBox.focus();
-				searchBox.parentElement.scrollIntoView();
-			}
-		});
-   
-		// handle URL changes
-		window.onhashchange = applyFilter;
-   
-		// trigger filter on page load
-		applyFilter();
-	}
-   
-	setup();
+	 navigator.clipboard.writeText(copyCommand.innerText).then(() => {
+		 {% for file in site.hackmurerie %}
+		 document.getElementById("{{ file.url }}_img").alt = "Copy";
+		 document.getElementById("{{ file.url }}_img").title = "Copy";
+		 {% endfor %}
+		 document.getElementById(file_url + "_img").alt = "Copied";
+		 document.getElementById(file_url + "_img").title = "Copied";
+	 }, () => {
+		 console.log("copy failed");
+	 });
+
+ }
+
+ function handleChange(checkbox, label) {
+	 if (checkbox.checked == true) {
+		 document.getElementById(label).className = 'match';
+		 document.getElementById(label + "_label").innerText = label + "✓";
+		 var slash = window.location.href.lastIndexOf("/");
+		 if (window.location.href[slash+1] == "#") {
+		     window.location.href+='+' + label
+		 } else {
+		     window.location.href+='#+' + label
+		 }
+	 } else {
+		 document.getElementById(label).className = "";
+		 document.getElementById(label + "_label").innerText = label;
+		 label = label.replace(" ", "%20");
+		 var new_href = window.location.href.replace("+"+label, "");
+		 window.location.href = new_href;
+		 if (window.location.hash == "") {
+			 document.getElementById("bin-search").value = "";
+		 }
+	 }
+ }
+
+ function filter(query) {
+     var queryArray = query.toLowerCase().trim().split(/ *\+/);
+     var binPattern = queryArray[0];
+     var functionPatterns = queryArray.splice(1);
+
+     // filter rows
+     var noResults = true;
+
+     var allItems = document.getElementsByName("item_name");
+     var allFilters = document.getElementsByName("service_name");
+     var allAttacks = document.getElementsByName("attack_name");
+     var allOS = document.getElementsByName("OS_name");
+     var allItems_parsed = [];
+     var allFilters_parsed = [];
+     var allAttacks_parsed = []; 
+     var allOS_parsed = []; 
+
+     allFilters.forEach((f) => {
+	     allFilters_parsed.push(f.id.toLowerCase());
+     });
+     var filter_chosen = functionPatterns.filter(element => allFilters_parsed.includes(element));
+     allItems.forEach((i) => {
+	     allItems_parsed.push(i.id.toLowerCase());
+     });
+     var item_chosen = functionPatterns.filter(element => allIfiltertems_parsed.includes(element));
+     allAttacks.forEach((a) => {
+	     allAttacks_parsed.push(a.id.toLowerCase());
+     });
+     var attack_chosen = functionPatterns.filter(element => allAttacks_parsed.includes(element));
+     allOS.forEach((o) => {
+	     allOS_parsed.push(o.id.toLowerCase());
+     });
+     var os_chosen = functionPatterns.filter(element => allOS_parsed.includes(element));
+
+     document.querySelectorAll('#bin-table tbody tr').forEach(function (row) {
+         var show = true;
+
+         var binName = row.children[0].firstElementChild.innerText.toLowerCase();
+	     
+         var functionElems = Array.from(row.children[0].childNodes[2].children);
+	 
+         if (show) {
+             functionElems.forEach((item) => {
+                 item.className = '';
+             });
+	     functionElems.forEach((item) => {
+	         let siblings = [];
+		 if (item.parentNode) {
+		     let sibling = item.parentNode.firstChild;
+		     while (sibling) {
+		         if (sibling.nodeType == 1 && sibling !== item) {
+			     siblings.push(sibling);
+			 }
+			     sibling = sibling.nextSibling;
+		     }
+		     for (i = 0; i < siblings.length; i++ ) {
+		         var found = false;
+			 functionPatterns.forEach((pattern) => {
+			     if (!pattern) {
+			         return;
+			     }
+					 
+			     if (siblings[i].innerText.toLowerCase().startsWith(pattern.toLowerCase())) {
+			         found = true;
+			     }
+			 });
+			 if (found) {
+	                     siblings[i].className = 'match';
+			 }
+		     }
+		     functionPatterns.forEach((p) => {
+			     if (!p) {
+				     return;
+			     }
+
+			     if (item.innerText.toLowerCase().startsWith(p.toLowerCase())) {
+				     item.className = 'match';
+			     }
+		     });
+
+		 }
+	     });
+
+         }
+	 var filled = true;
+	 var found_binName = false;
+         if (binName.indexOf(binPattern) !== -1 && binPattern.length !== 0) {
+		 found_binName = true;
+	 }
+
+	 functionElems.forEach((i) => {
+	     {% for item_pair in site.data.items %}
+	     {% assign item_id = item_pair[0] %}
+	     {% assign item = item_pair[1] %}
+	     
+		 if (i.innerText.toLowerCase() == "{{ item.label | downcase }}" && i.className !== "match") {
+	         filled = false;
+	     }
+
+	     {% endfor %}
+	 });
+
+	 var found_filter = -1;
+	 if (filter_chosen.length !== 0) {
+		 found_filter = 0;
+		 filter_chosen.forEach((f) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == f) {
+					 found_filter = found_filter + 1;
+				 }
+			 });
+		 });
+	 }
+
+	 var found_attack = -1;
+	 if (attack_chosen.length !== 0) {
+		 found_attack = 0;
+		 attack_chosen.forEach((a) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == a) {
+					 found_attack = found_attack + 1;
+				 }
+			 });
+		 });
+	 }
+					 
+	 var found_os = -1;
+	 if (os_chosen.length !== 0) {
+		 found_os = 0;
+		 os_chosen.forEach((o) => {
+			 functionElems.forEach((i) => {
+				 if (i.innerText.toLowerCase() == o) {
+					 found_os = found_os + 1;
+				 }
+			 });
+		 });
+	 }
+
+	 if ((!filled && (found_attack < 1 && found_filter < 1 && found_os < 1 && !found_binName)) || (found_attack == 0 || found_filter == 0 || found_os == 0) || (!filled && item_chosen.length !== 0) || ((found_attack !== attack_chosen.length && found_attack !== -1) || (found_filter !== filter_chosen.length && found_filter !== -1) || (found_os !== os_chosen.length && found_os !== -1)) || (binPattern.length !== 0 && !found_binName)) {
+		row.style.display = 'none';
+	 } else {
+	    	row.style.display = '';
+	     	noResults = false;
+	 }
+
+	 if (functionPatterns.length == 0 && binPattern.length == 0) {
+	    	row.style.display = '';
+	     	noResults = false;
+	 }
+
+     });
+
+     // update the search message visibility
+     //var searchMessage = document.getElementById('search-message');
+     //searchMessage.style.display = noResults ? 'table-cell' : 'none';
+ }
+
+ function applyFilter() {
+     // filter on load according to the URL
+     var searchBox = document.getElementById('bin-search');
+     var query = decodeURIComponent(location.hash.slice(1));
+     filter(query);
+     if (query) {
+         searchBox.value = query;
+     }
+ }
+
+ function setup() {
+     var searchBox = document.getElementById('bin-search');
+
+     // ensure height during filtering
+     var binTableWrapper = document.getElementById('bin-table-wrapper');
+     binTableWrapper.style.height = binTableWrapper.clientHeight + 'px';
+
+     // handle user input
+     searchBox.addEventListener('input', function () {
+         var query = searchBox.value;
+         history.replaceState(null, null, encodeURI('#' + query));
+         applyFilter();
+     });
+
+     // handle shortcuts
+     addEventListener('keydown', function (event) {
+         // focus search box on valid keydown
+         if (event.key.toLowerCase().match(/^[+a-z]$/) &&
+             !(event.ctrlKey || event.altKey || event.metaKey)) {
+             searchBox.focus();
+             searchBox.parentElement.scrollIntoView();
+         }
+         // clear filter on escape
+         else if (event.key === 'Escape') {
+             location.hash = searchBox.value = '';
+             searchBox.focus();
+             searchBox.parentElement.scrollIntoView();
+         }
+     });
+
+     // handle URL changes
+     window.onhashchange = applyFilter;
+
+     // trigger filter on page load
+     applyFilter();
+ }
+
+ setup();
 </script>
