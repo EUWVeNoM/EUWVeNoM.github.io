@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's wmiexec.py uses the Windows Management Instrumentation (WMI) to give you an interactive shell on the Windows host.
+  Le fichier wmiexec.py d'Impacket utilise l'instrumentation de gestion Windows (WMI) pour vous donner un shell interactif sur l'hôte Windows.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

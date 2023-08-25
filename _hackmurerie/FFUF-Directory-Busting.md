@@ -18,6 +18,7 @@ attack_types:
   - Enumeration
 OS:
   - Linux
+  - Approved-tool
 references:
   - https://github.com/ffuf/ffuf
   - https://cheatsheet.haax.fr/web-pentest/tools/ffuf/

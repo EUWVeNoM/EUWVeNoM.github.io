@@ -1,16 +1,16 @@
 ---
 description: |
-    Iconv is a command-line program used to convert text from one character encoding to another. It can be used to convert text files from one encoding to another, or to perform character set conversions when moving text between different operating systems or applications. It is useful for copying files from Linux to Windows as it can encode powershell files and execute it on the Windows machine.
+  Iconv est un programme en ligne de commande utilisé pour convertir du texte d'un encodage de caractères à un autre. Il peut être utilisé pour convertir des fichiers texte d'un encodage à un autre, ou pour effectuer des conversions de jeux de caractères lors du déplacement de texte entre différents systèmes d'exploitation ou applications. Il est utile pour copier des fichiers de Linux vers Windows, car il peut encoder des fichiers powershell et les exécuter sur la machine Windows.
 
-    Command Reference:
+  Command Reference:
 
-        Copy file from Linux to Windows
+    Copy file from Linux to Windows
 
-        File to copy: powershell.ps1
+    File to copy: powershell.ps1
         
-        encoding: UTF-16LE
+    encoding: UTF-16LE
 
-        Windows command: powershell <base64> -enc
+    Windows command: powershell <base64> -enc
 
 command: |
   cat powershel.ps1 |iconv -t UTF-16LE |base64 -w 0
@@ -20,6 +20,7 @@ items:
 services:
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - General
 references:

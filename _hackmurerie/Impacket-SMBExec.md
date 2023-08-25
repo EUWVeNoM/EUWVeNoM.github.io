@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's smbexec.py. This will give you an interactive shell on the Windows host.
+  Impacket's smbexec.py. Cela vous donnera un shell interactif sur l'hôte Windows.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

@@ -22,6 +22,7 @@ services:
   - WMI
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

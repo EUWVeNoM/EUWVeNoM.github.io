@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's psexec.py offers psexec like functionality. This will give you an interactive shell on the Windows host. psexec.py also allows using Service Tickets, saved as a ccache file for Authentication. It can be obtained via Impacket's GetST.py
+  Le fichier psexec.py d'Impacket offre des fonctionnalités similaires à celles de psexec. Cela vous donnera un shell interactif sur l'hôte Windows. psexec.py permet également d'utiliser les tickets de service, sauvegardés dans un fichier ccache pour l'authentification. Il peut être obtenu via le fichier GetST.py d'Impacket.
 
   Command Reference:
 
@@ -20,6 +20,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

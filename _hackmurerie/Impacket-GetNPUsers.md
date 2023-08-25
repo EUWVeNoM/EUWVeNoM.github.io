@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's GetNPUsers.py will attempt to harvest the non-preauth AS_REP responses for a given list of usernames. These responses will be encrypted with the user's password, which can then be cracked offline.
+  GetNPUsers.py d'Impacket va tenter de récolter les réponses AS_REP nonreauth pour une liste donnée de noms d'utilisateurs. Ces réponses seront cryptées avec le mot de passe de l'utilisateur, qui peut alors être craqué hors ligne.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

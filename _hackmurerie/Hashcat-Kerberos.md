@@ -1,15 +1,15 @@
 ---
 description: |
-  The command hashcat is a password recovery tool that allows for the cracking of various types of password hashes. The goal of the command is to attempt to crack the password hash (Kerberos) using a list of common passwords from the rockyou wordlist.
+  La commande hashcat est un outil de récupération de mots de passe qui permet de casser différents types de hachages de mots de passe. L'objectif de la commande est de tenter de casser le hachage du mot de passe (Kerberos) à l'aide d'une liste de mots de passe courants provenant de la liste de mots de rockyou.
 
   Command Reference:
-  ```
-  Mode: 18200 (Kerberos 5 AS-REP etype 23)
 
-  TGT hash: user.kerb
+    Mode: 18200 (Kerberos 5 AS-REP etype 23)
 
-  Wordlist: /usr/share/wordlists/rockyou.txt
-  ```
+    TGT hash: user.kerb
+
+    Wordlist: /usr/share/wordlists/rockyou.txt
+
 command: |
   hashcat -m 18200 user.kerb /usr/share/wordlists/rockyou.txt
 
@@ -23,6 +23,7 @@ services:
   - Kerberos
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Cracking
 references:

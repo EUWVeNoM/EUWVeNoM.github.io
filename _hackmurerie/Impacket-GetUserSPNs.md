@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's GetUserSPNs.py will attempt to fetch Service Principal Names that are associated with normal user accounts. What is returned is a ticket that is encrypted with the user account's password, which can then be bruteforced offline.
+  GetUserSPNs.py d'Impacket tente de récupérer les Service Principal Names qui sont associés à des comptes d'utilisateurs normaux. Ce qui est retourné est un ticket crypté avec le mot de passe du compte utilisateur, qui peut ensuite être forcé hors ligne.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

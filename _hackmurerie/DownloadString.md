@@ -1,6 +1,6 @@
 ---
 description: |
-  (New-Object Net.WebClient).DownloadString is a PowerShell command that uses the .NET WebClient class to download and EXECUTE a file from the server without saving the file.
+  (New-Object Net.WebClient).DownloadString est une commande PowerShell qui utilise la classe .NET WebClient pour télécharger et EXÉCUTER un fichier à partir du serveur sans l'enregistrer.
 
   Command Reference:
 
@@ -12,6 +12,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - General
 references:

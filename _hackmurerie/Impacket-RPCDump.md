@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's rpcdump.py enumerates Remote Procedure Call (RPC) endpoints.
+  Le fichier rpcdump.py d'Impacket énumère les points d'extrémité des appels de procédure à distance (RPC).
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

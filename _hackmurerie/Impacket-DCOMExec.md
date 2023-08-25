@@ -1,8 +1,8 @@
 ---
 description: |
-  Impacket's dcomexec.py provides an interactive shell on the Windows host similar to wmiexec.py, but using varying DCOM endpoints.
+  Le fichier dcomexec.py d'Impacket fournit un shell interactif sur l'hôte Windows, similaire à wmiexec.py, mais utilisant différents points d'extrémité DCOM.
 
-  Currently supports MMC20.Application, ShellWindows, and ShellBrowserWindow DCOM objects.
+  Il prend actuellement en charge les objets DCOM MMC20.Application, ShellWindows et ShellBrowserWindow.
 
   Command Reference:
 
@@ -25,6 +25,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

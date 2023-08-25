@@ -1,6 +1,6 @@
 ---
 description: |
-  (New-Object Net.WebClient).DownloadFile is a PowerShell command that uses the .NET WebClient class to download a file from the server and saves it in a local directory.
+  (New-Object Net.WebClient).DownloadFile est une commande PowerShell qui utilise la classe .NET WebClient pour télécharger un fichier depuis le serveur et l'enregistrer dans un répertoire local.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - General
 references:

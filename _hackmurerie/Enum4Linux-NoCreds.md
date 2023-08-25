@@ -14,6 +14,7 @@ attack_types:
   - Enumeration
 OS:
   - Linux
+  - Approved-tool
 references:
   - https://github.com/CiscoCXSecurity/enum4linux
   - https://highon.coffee/blog/enum4linux-cheat-sheet/

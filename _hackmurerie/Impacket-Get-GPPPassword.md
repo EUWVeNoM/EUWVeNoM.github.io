@@ -1,6 +1,6 @@
 ---
 description: |
-  Python script to automatically extract and decrypt Group Policy Preferences (GPP) passwords using streams for carving files instead of mounting shares
+  Script Python pour extraire et décrydéchiffrer automatiquement les mots de passe des préférences de stratégie de groupe (GPP) en utilisant des flux pour découper des fichiers au lieu de monter des partages.
 
   Command Reference:
 
@@ -23,6 +23,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Enumeration

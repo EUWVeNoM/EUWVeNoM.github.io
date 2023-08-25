@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's addcomputer.py will add a computer account to the domain and set its password. The following command will create a new computer over LDAPS. Plain LDAP is not supported, as it doesn't allow setting the password of the new computer.
+  La commande addcomputer.py d'Impacket ajoutera un compte d'ordinateur au domaine et définira son mot de passe. La commande suivante permet de créer un nouvel ordinateur via LDAPS. Le LDAP simple n'est pas pris en charge, car il ne permet pas de définir le mot de passe du nouvel ordinateur.
 
   Command Reference:
 
@@ -26,6 +26,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistence

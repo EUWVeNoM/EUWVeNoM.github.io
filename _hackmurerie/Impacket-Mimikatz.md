@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's mimikatz.py will drop you into a mimikatz shell on the target machine, allowing you to perform any mimikatz-related actions, such as dumping credentials from memory, dumping keys, etc.
+  Le fichier mimikatz.py d'Impacket vous fera entrer dans un shell mimikatz sur la machine cible, ce qui vous permettra d'effectuer toutes les actions liées à mimikatz, telles que l'extraction des informations d'identification de la mémoire, l'extraction des clés, etc.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

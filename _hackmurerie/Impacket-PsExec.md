@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's psexec.py offers psexec like functionality. This will give you an interactive shell on the Windows host. Or can also be used to find writable shares on the target machine.
+  Le fichier psexec.py d'Impacket offre des fonctionnalités similaires à celles de psexec. Cela vous donnera un shell interactif sur l'hôte Windows. Il peut également être utilisé pour trouver des parts accessibles en écriture sur la machine cible.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Enumeration

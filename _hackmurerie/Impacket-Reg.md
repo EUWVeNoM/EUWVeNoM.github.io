@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's reg.py is a remote registry manipulation tool, providing similar functionality to reg.exe in Windows.
+  reg.py d'Impacket est un outil de manipulation du registre à distance, qui offre des fonctionnalités similaires à reg.exe sous Windows.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistence

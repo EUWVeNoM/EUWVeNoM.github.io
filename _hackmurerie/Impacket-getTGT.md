@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's getTGT.py uses a valid user's NTLM hash to request Kerberos tickets, in order to access any service or machine where that user has permissions.
+  Le fichier getTGT.py d'Impacket utilise le hachage NTLM d'un utilisateur valide pour demander des tickets Kerberos, afin d'accéder à n'importe quel service ou machine où cet utilisateur a des permissions.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

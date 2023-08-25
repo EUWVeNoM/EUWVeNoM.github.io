@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's samrdump.py communicates with the Security Account Manager Remote (SAMR) interface to list system user accounts, available resource shares, and other sensitive information.
+  Le fichier samrdump.py d'Impacket communique avec l'interface SAMR (Security Account Manager Remote) pour dresser la liste des comptes d'utilisateurs du système, des partages de ressources disponibles et d'autres informations sensibles.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

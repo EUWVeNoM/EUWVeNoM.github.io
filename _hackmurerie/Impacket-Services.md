@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's services.py communicates with Windows services using the MSRPC interface. It can perform many different actions on any service.
+  Le fichier services.py d'Impacket communique avec les services Windows en utilisant l'interface MSRPC. Il peut effectuer de nombreuses actions différentes sur n'importe quel service.
 
   Command Reference:
 
@@ -24,6 +24,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

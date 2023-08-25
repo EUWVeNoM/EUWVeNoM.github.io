@@ -1,8 +1,8 @@
 ---
 description: |
-  Impacket's ntlmrelayx.py performs NTLM Relay Attacks, creating an SMB and HTTP server and relaying credentials to various different protocols (SMB, HTTP, LDAP, etc.).
+  Le fichier ntlmrelayx.py d'Impacket effectue des attaques de relais NTLM, en créant un serveur SMB et HTTP et en relayant les informations d'identification vers différents protocoles (SMB, HTTP, LDAP, etc.).
 
-  The below command will perform WPAD spoofing to force the victim machine to authenticate to the attacker controlled host. The command will then relay the authentication to create a new computer object and grant it delegation rights to impersonate users on the victim machine. This command should be used in conjunction with mitm6.
+  La commande ci-dessous effectue une usurpation de WPAD pour forcer la machine victime à s'authentifier auprès de l'hôte contrôlé par l'attaquant. La commande relaie ensuite l'authentification pour créer un nouvel objet informatique et lui accorder des droits de délégation afin d'usurper l'identité d'utilisateurs sur la machine victime. Cette commande doit être utilisée conjointement avec mitm6.
 
   Command Reference:
 
@@ -18,6 +18,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

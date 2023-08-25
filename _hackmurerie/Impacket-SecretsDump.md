@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's secretsdump.py will perform various techniques to dump secrets from the remote machine without executing any agent. Techniques include reading SAM and LSA secrets from registries, dumping NTLM hashes, plaintext credentials, and kerberos keys, and dumping NTDS.dit. The following command will attempt to dump all secrets from the target machine using the previously mentioned techniques.
+  Le fichier secretsdump.py d'Impacket exécute diverses techniques pour extraire les secrets de la machine distante sans exécuter d'agent. Les techniques incluent la lecture des secrets SAM et LSA à partir des registres, l'extraction des hachages NTLM, des informations d'identification en clair et des clés kerberos, et l'extraction de NTDS.dit. La commande suivante tente d'extraire tous les secrets de la machine cible à l'aide des techniques mentionnées précédemment.
 
   Command Reference:
 
@@ -23,6 +23,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

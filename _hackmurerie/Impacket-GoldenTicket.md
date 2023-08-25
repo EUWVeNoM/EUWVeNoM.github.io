@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's ticketer.py can perform Golden Ticket attacks, which crafts a valid TGT ticket using a valid user's NTLM hash. It is then possible to access any service using the TGT by requesting a TGS for that service.
+  Le logiciel ticketer.py d'Impacket peut effectuer des attaques par ticket d'or, ce qui permet de créer un ticket TGT valide en utilisant le hachage NTLM d'un utilisateur valide. Il est alors possible d'accéder à n'importe quel service utilisant le TGT en demandant un TGS pour ce service.
 
   Command Reference:
 
@@ -24,6 +24,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistence

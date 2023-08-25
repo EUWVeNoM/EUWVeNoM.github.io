@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's getST.py will request a Service Ticket and save it as ccache. If the account has constrained delegation privileges, you can use the `-impersonate` flag to request a ticket on behalf of another user. The following command will impersonate the Administrator account using the hashed password of user `john` and request a Service Ticket on its behalf for the `www` service on host `server01.test.local`.
+  Le fichier getST.py d'Impacket demandera un ticket de service et le sauvegardera dans ccache. Si le compte a des privilèges de délégation restreints, vous pouvez utiliser le drapeau `-impersonate` pour demander un ticket au nom d'un autre utilisateur. La commande suivante usurpe l'identité du compte Administrateur en utilisant le mot de passe haché de l'utilisateur `john` et demande un ticket de service en son nom pour le service `www` sur l'hôte `server01.test.local`.
 
   Command Reference:
 
@@ -28,6 +28,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - PrivEsc

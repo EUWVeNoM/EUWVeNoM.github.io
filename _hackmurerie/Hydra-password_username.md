@@ -1,19 +1,19 @@
 ---
 description: |
-  Description what the command does and is usefull for.
+  Description de l'action et de l'utilité de la commande.
 
   Command Reference:
-  ```
-  List of users: userlist.txt
 
-  Password: denjanjade122566
+    Username: <user_list>
 
-  Server/IP: qreader.htb
+    Password: <passwd>
 
-  Service: ssh
-  ```
+    Server/IP: <domain.local>
+
+    Service: ssh
+
 command: |
-  hydra -L userlist.txt -p denjanjade122566 qreader.htb ssh 
+  hydra -L <user_list> -p  <passwd> <domain.local> ssh 
 
 items:
   - Username
@@ -26,6 +26,7 @@ services:
 OS:
   - Windows
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
   - Exploitation

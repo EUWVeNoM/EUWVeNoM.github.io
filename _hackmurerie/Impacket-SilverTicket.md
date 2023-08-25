@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's ticketer.py can perform Silver Ticket attacks, which crafts a valid TGS ticket for a specific service using a valid user's NTLM hash. It is then possible to gain access to that service. The following command crafts a TGS for the SMB service, which can then be used to gain a shell.
+  Le logiciel ticketer.py d'Impacket peut effectuer des attaques par ticket d'argent, ce qui permet de créer un ticket TGS valide pour un service spécifique en utilisant le hachage NTLM d'un utilisateur valide. Il est alors possible d'accéder à ce service. La commande suivante crée un TGS pour le service SMB, qui peut ensuite être utilisé pour obtenir un shell.
 
   Command Reference:
 
@@ -26,6 +26,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistence

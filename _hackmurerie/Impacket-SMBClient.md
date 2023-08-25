@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's smbclient.py is a generic smbclient, allowing you to list shares and files, rename, upload and download files and create and delete directories.
+  Impacket's smbclient.py est un client smb générique, qui vous permet de lister les partages et les fichiers, de renommer, d'uploader et de télécharger des fichiers et de créer et de supprimer des répertoires.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

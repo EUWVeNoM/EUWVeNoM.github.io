@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's GetADUsers.py will attempt to gather data about the domain's users and their corresponding email addresses.
+  GetADUsers.py d'Impacket tentera de rassembler des données sur les utilisateurs du domaine et leurs adresses électroniques correspondantes.
 
   Command Reference:
 
@@ -24,6 +24,7 @@ attack_types:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 references:
   - https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetADUsers.py
 ---

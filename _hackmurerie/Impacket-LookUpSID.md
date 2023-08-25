@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's lookupsid.py performs bruteforcing of Windows SID's to identify users/groups on the remote target.
+  Le fichier lookupsid.py d'Impacket effectue un bruteforcing des SID Windows pour identifier les utilisateurs/groupes sur la cible distante.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's atexec.py uses the Task Scheduler service on the remote Windows host to execute the given command. It will create a windows task with a random name, trigger the task, and then delete it. The following command executes `whoami` on the remote Windows host.
+  La commande atexec.py d'Impacket utilise le service de planification des tâches sur l'hôte Windows distant pour exécuter la commande donnée. Il créera une tâche Windows avec un nom aléatoire, déclenchera la tâche, puis la supprimera. La commande suivante exécute `whoami` sur l'hôte Windows distant.
 
   Command Reference:
 
@@ -23,6 +23,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:
