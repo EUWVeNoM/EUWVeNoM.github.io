@@ -1,6 +1,6 @@
 ---
 description: |
-  Impacket's addcomputer.py will add a computer account to the domain and set its password. The following command will create a new computer over the SMB by specifying the `SAMR` method.
+  La commande addcomputer.py d'Impacket ajoutera un compte d'ordinateur au domaine et définira son mot de passe. La commande suivante crée un nouvel ordinateur via SMB en spécifiant la méthode `SAMR`.
 
   Command Reference:
 
@@ -26,6 +26,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistence
