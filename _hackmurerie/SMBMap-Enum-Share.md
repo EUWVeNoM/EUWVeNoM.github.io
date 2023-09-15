@@ -1,6 +1,6 @@
 ---
 description: |
-  SMBMap is a tool used to enumerate SMB share drives, including listing share drive permissions, share contents, upload/download functionality, file name enumeration, and remote command execution. The following command will enumerate a list of SMB hosts for accessible SMB shares, both local and mapped drives, using valid credentials.
+  SMBMap est un outil utilisé pour énumérer les lecteurs partagés SMB, y compris la liste des permissions des lecteurs partagés, le contenu des partages, la fonctionnalité de téléchargement, l'énumération des noms de fichiers et l'exécution de commandes à distance. La commande suivante permet d'énumérer une liste d'hôtes SMB pour les partages SMB accessibles, qu'il s'agisse de lecteurs locaux ou mappés, à l'aide d'informations d'identification valides.
 
   Command Reference:
 
@@ -22,6 +22,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

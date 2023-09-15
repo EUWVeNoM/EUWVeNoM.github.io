@@ -1,6 +1,6 @@
 ---
 description: |
-  This is useful for user account/password brute force guessing and username enumeration when usernames are based on the users' names. By attempting a few weak passwords across a large set of user accounts, user account lockout thresholds can be avoided.
+  Cette fonction est utile pour deviner les comptes d'utilisateurs/mots de passe par la force brute et pour énumérer les noms d'utilisateurs lorsque ces derniers sont basés sur les noms des utilisateurs. En essayant quelques mots de passe faibles sur un grand nombre de comptes d'utilisateurs, les seuils de verrouillage des comptes d'utilisateurs peuvent être évités.
 
   Command Reference:
   ```
@@ -20,6 +20,7 @@ services:
 OS:
   - Windows
   - Linux
+  - Approved-tool
 attack_types:
   - Cracking
   - Enumeration

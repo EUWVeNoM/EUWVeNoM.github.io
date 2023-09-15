@@ -23,6 +23,7 @@ services:
   - SMB
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

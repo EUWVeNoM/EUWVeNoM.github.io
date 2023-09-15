@@ -1,6 +1,6 @@
 ---
 description: |
-  Snaffler is a tool used to enumerate sensitive data (passwords, PII, etc.) from file shares in Active Directory. It searches for interesting files based on file extensions, file names, and file content that's matched against regex. It's also highly configurable, allowing you to add your own regex searches. The following command will enumerate all machines in the domain and search for accessible file shares, checking for interesting files that might have sensitive data.
+  Snaffler est un outil utilisé pour énumérer des données sensibles (mots de passe, informations confidentielles, etc.) à partir de partages de fichiers dans Active Directory. Il recherche les fichiers intéressants en se basant sur les extensions de fichiers, les noms de fichiers et le contenu des fichiers qui sont comparés à des expressions rationnelles. Il est également hautement configurable, ce qui vous permet d'ajouter vos propres recherches par expressions rationnelles. La commande suivante énumère toutes les machines du domaine et recherche les partages de fichiers accessibles, en vérifiant les fichiers intéressants susceptibles de contenir des données sensibles.
 
   Command Reference:
 
@@ -16,6 +16,7 @@ services:
   - SMB
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

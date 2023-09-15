@@ -1,6 +1,6 @@
 ---
 description: |
-  windapsearch enumerates users, groups, and computers from a Windows domain through LDAP queries. The following command enumerates all 3 of the above mentioned using provided credentials.
+  Windapsearch énumère les utilisateurs, les groupes et les ordinateurs d'un domaine Windows par le biais de requêtes LDAP. La commande suivante énumère les trois éléments mentionnés ci-dessus en utilisant les informations d'identification fournies.
 
   Command Reference:
 
@@ -32,6 +32,7 @@ attack_types:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 references:
   - https://github.com/ropnop/windapsearch
   - https://www.attackdebris.com/?p=470

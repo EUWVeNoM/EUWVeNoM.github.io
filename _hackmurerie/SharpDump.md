@@ -1,6 +1,6 @@
 ---
 description: |
-  SharpDump.exe is part of the GhostPack suite of tools and is a C# port of PowerSploit's Out-Minidump.ps1. It can dump the process for LSASS or a specific process given it's PID. This dump can then be fed into mimikatz to extract sensitive information. The following command simply dumps the LSASS process.
+  SharpDump.exe fait partie de la suite d'outils GhostPack et est un portage en C# de Out-Minidump.ps1 de PowerSploit. Il permet d'extraire le processus LSASS ou un processus spécifique à partir de son PID. Ce dump peut ensuite être introduit dans mimikatz pour extraire des informations sensibles. La commande suivante vide simplement le processus LSASS.
 
 command: |
   SharpDump.exe
@@ -8,6 +8,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - PrivEsc
   - Enumeration

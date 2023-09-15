@@ -1,6 +1,6 @@
 ---
 description: |
-  Shellcode runner in a VBA macro can be used inside a Office product. This code make use of encrypted shellcode with XOR and has a Sleep function which ensures that it is not tested against an AV emulator.
+  Le shellcode runner dans une macro VBA peut être utilisé à l'intérieur d'un produit Office. Ce code utilise un shellcode crypté avec XOR et dispose d'une fonction Sleep qui garantit qu'il n'est pas testé contre un émulateur AV.
 
   Command Reference:
 
@@ -75,6 +75,7 @@ services:
     - 
 OS:
     - Windows
+    - Approved-tool
 attack_types:
     - Persistence
     - Injection

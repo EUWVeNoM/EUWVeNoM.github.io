@@ -1,6 +1,6 @@
 ---
 description: |
-  SharpWMI.exe is part of the GhostPack suite of tools that provides WMI functionality, such as local/remote WMI queries, remote WMI process creation, and remote execution of arbitrary VBS through WMI events. The following command will simply list all processes running on the local system.
+  SharpWMI.exe fait partie de la suite d'outils GhostPack qui fournit des fonctionnalités WMI, telles que des requêtes WMI locales/à distance, la création de processus WMI à distance et l'exécution à distance de VBS arbitraires par le biais d'événements WMI. La commande suivante permet de dresser la liste de tous les processus en cours d'exécution sur le système local.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ services:
   - WMI
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Persistence
 references:

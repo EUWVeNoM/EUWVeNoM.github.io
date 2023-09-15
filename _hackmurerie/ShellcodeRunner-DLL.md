@@ -1,6 +1,6 @@
 ---
 description: |
-  Shellrunner in managed DLL, with the below code you can create a DLL that hold an meterpreter shell. Host this DLL on your webserver and retrieve it via the second part of the code, which makes sure the DLL is directly loaded into the memory of the Windows machine.
+  Shellrunner dans une DLL gérée, avec le code ci-dessous vous pouvez créer une DLL qui contient un shell meterpreter. Hébergez cette DLL sur votre serveur web et récupérez-la via la deuxième partie du code, qui s'assure que la DLL est directement chargée dans la mémoire de la machine Windows.
 
   Command Reference:
 
@@ -92,6 +92,7 @@ services:
     - 
 OS:
     - Windows
+    - Approved-tool
 attack_types:
     - Persistence
     - Injection

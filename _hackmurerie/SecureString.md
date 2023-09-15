@@ -1,6 +1,6 @@
 ---
 description: |
-  ConvertTo-SecureString PowerShell command is used to convert plain text into an encrypted form that can be used for secure storage or transmission. It takes a plain text string and converts it to a secure string object that can be saved to a file or used in memory for authentication or encryption purposes.
+  La commande PowerShell ConvertTo-SecureString permet de convertir un texte en clair en une forme cryptée pouvant être utilisée pour un stockage ou une transmission sécurisés. Elle prend une chaîne de texte en clair et la convertit en un objet chaîne sécurisé qui peut être enregistré dans un fichier ou utilisé en mémoire à des fins d'authentification ou de cryptage.
 
   Command Reference:
 
@@ -16,6 +16,7 @@ services:
 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - General
 references:

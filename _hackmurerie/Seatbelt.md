@@ -1,6 +1,6 @@
 ---
 description: |
-  Seatbelt.exe is part of the GhostPack suite of tools that will perform a lot of "safety checks" on the Windows host and collect system data that could be useful for potential privilege escalation or persistence methods. The following command will run all checks on the system and store the output in a file (WARNING: will collect a lot of data. remove `-full` for less output).
+  Seatbelt.exe fait partie de la suite d'outils GhostPack qui effectue de nombreux "contrôles de sécurité" sur l'hôte Windows et collecte des données système qui pourraient être utiles pour d'éventuelles méthodes d'escalade des privilèges ou de persistance. La commande suivante exécute toutes les vérifications sur le système et stocke la sortie dans un fichier (ATTENTION : collecte beaucoup de données. supprimez `-full` pour moins de sortie).
 
   Command Reference:
 
@@ -14,6 +14,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - PrivEsc
   - Persistence

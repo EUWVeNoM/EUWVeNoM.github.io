@@ -1,11 +1,11 @@
 ---
 description: |
-  sshng2john is a tool used to convert SSH private keys in OpenSSH format to a format that can be cracked using password cracking tools like John the Ripper. This can finally result in cracking the password of the private key.
+  sshng2john est un outil utilisé pour convertir les clés privées SSH au format OpenSSH dans un format qui peut être craqué à l'aide d'outils de craquage de mots de passe tels que John the Ripper. Cela peut finalement permettre de craquer le mot de passe de la clé privée.
 
   Command Reference:
-  ```
-  Private SSH key: id_rsa
-  ```
+
+    Private SSH key: id_rsa
+
 command: |
   sshng2john.py id_rsa
 
@@ -19,6 +19,7 @@ services:
 OS:
   - Windows
   - Linux
+  - Approved-tool
 attack_types:
   - Cracking
 references:

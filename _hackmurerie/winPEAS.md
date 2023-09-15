@@ -14,7 +14,7 @@ items:
   - Shell
 OS:
   - Windows
-  - New-tool
+  - Approved-tool
 attack_types:
   - PrivEsc
 references:

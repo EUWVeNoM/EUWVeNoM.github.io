@@ -1,6 +1,6 @@
 ---
 description: |
-  targetedKerberoast is a Python script that can, like many others (e.g. GetUserSPNs.py), print "kerberoast" hashes for user accounts that have a SPN set. This tool brings the following additional feature: for each user without SPNs, it tries to set one (abuse of a write permission on the servicePrincipalName attribute), print the "kerberoast" hash, and delete the temporary SPN set for that operation.
+  TargetedKerberoast est un script Python qui peut, comme beaucoup d'autres (par exemple GetUserSPNs.py), imprimer les hashs "kerberoast" pour les comptes utilisateurs qui ont un SPN défini. Cet outil apporte la fonctionnalité supplémentaire suivante : pour chaque utilisateur sans SPN, il tente d'en définir un (abus d'une permission d'écriture sur l'attribut servicePrincipalName), imprime le hash "kerberoast", et supprime le SPN temporaire défini pour cette opération.
 
   Command Reference:
 
@@ -24,6 +24,7 @@ services:
   - NTLM
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Exploitation
 references:
