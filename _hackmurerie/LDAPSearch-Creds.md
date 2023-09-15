@@ -1,6 +1,6 @@
 ---
 description: |
-  ldapsearch is a Linux based tool that opens a connection to an LDAP server, binds, and performs a search using specified parameters. The following command will attempt to find sensitive information (such as leaked creds), by querying all LDAP objects, essentially dumping all the data that an anonymous user can access.
+  Ldapsearch est un outil basé sur Linux qui ouvre une connexion à un serveur LDAP, s'y attache et effectue une recherche en utilisant les paramètres spécifiés. La commande suivante tentera de trouver des informations sensibles (telles que des creds divulgués) en interrogeant tous les objets LDAP, ce qui revient à déverser toutes les données auxquelles un utilisateur anonyme peut avoir accès.
 
   Command Reference:
 
@@ -19,6 +19,7 @@ services:
   - LDAP
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

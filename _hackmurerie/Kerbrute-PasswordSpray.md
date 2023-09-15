@@ -1,6 +1,6 @@
 ---
 description: |
-  ropnop's kerbrute bruteforces and enumerates valid Active Directory accounts through Kerberos Pre-Authentication. The following command will perform a password spray account against a list of provided users given a password.
+  Kerbrute de ropnop effectue une recherche brute et énumère les comptes Active Directory valides par le biais de la préauthentification Kerberos. La commande suivante effectue une pulvérisation de mot de passe contre une liste d'utilisateurs fournis avec un mot de passe.
 
   Command Reference:
 
@@ -18,6 +18,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

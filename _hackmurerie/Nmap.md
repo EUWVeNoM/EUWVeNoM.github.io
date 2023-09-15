@@ -18,6 +18,7 @@ attack_types:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 references:
   - https://nmap.org/man/fr/index.html
   - https://hackertarget.com/nmap-cheatsheet-a-quick-reference-guide/

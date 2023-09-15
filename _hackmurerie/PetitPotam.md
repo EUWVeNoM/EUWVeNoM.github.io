@@ -1,6 +1,6 @@
 ---
 description: |
-  PetitPotam leverages the MS-EFSRPC API to connect to a Windows host, hijack the authentication session, and trigger an authentication from the target host to an attacker controlled host (usually SMB or HTTP server). This captured authentication can then be relayed to authenticate to other hosts and perform more attacks. See more in ntlmrelayx.py.
+  PetitPotam exploite l'API MS-EFSRPC pour se connecter à un hôte Windows, détourner la session d'authentification et déclencher une authentification de l'hôte cible vers un hôte contrôlé par l'attaquant (généralement un serveur SMB ou HTTP). Cette authentification capturée peut ensuite être relayée pour authentifier d'autres hôtes et effectuer d'autres attaques. Plus d'informations dans ntlmrelayx.py.
 
   Command Reference:
 
@@ -25,6 +25,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

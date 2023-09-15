@@ -1,6 +1,6 @@
 ---
 description: |
-  ropnop's kerbrute bruteforces and enumerates valid Active Directory accounts through Kerberos Pre-Authentication. The following command will bruteforce an account against a list of provided passwords given a username.
+  Kerbrute de ropnop permet de forcer brutalement et d'énumérer les comptes Active Directory valides grâce à la préauthentification Kerberos. La commande suivante permet de forcer brutalement un compte à partir d'une liste de mots de passe fournis avec un nom d'utilisateur.
 
   Command Reference:
 
@@ -18,6 +18,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

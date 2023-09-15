@@ -1,19 +1,19 @@
 ---
 description: |
-  PKINIT gettgtpkinit.py request a TGT using a PFX file, either as file or as base64 encoded blob, or PEM files for cert+key. This uses Kerberos PKINIT and will output a TGT into the specified ccache. It will also print the AS-REP encryption key which you may need for the getnthash.py tool.
-
+  PKINIT gettgtpkinit.py demande un TGT en utilisant un fichier PFX, soit en tant que fichier, soit en tant que blob encodé en base64, ou des fichiers PEM pour cert+key. Ceci utilise Kerberos PKINIT et produira un TGT dans le ccache spécifié. Il affichera également la clé de chiffrement AS-REP dont vous pouvez avoir besoin pour l'outil getnthash.py.
+  
   Command Reference:
-    ```
-    Domain: test.local
 
-    Host that you got the certificate from: DC01
+      Domain: test.local
 
-    PFX file: crt.pfx
+      Host that you got the certificate from: DC01
 
-    PFX file password: password123
+      PFX file: crt.pfx
 
-    TGT requested: out.ccache
-    ```
+      PFX file password: password123
+
+      TGT requested: out.ccache
+
 command: |
   python3 gettgtpkinit.py test.local/DC01\$ -cert-pfx crt.pfx -pfx-pass password123 out.ccache
 items:
@@ -25,6 +25,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - PrivEsc

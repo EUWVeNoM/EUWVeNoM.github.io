@@ -1,6 +1,6 @@
 ---
 description: |
-  The Netcat (nc) command is a command-line utility for reading and writing data between two computer networks. Which can be used to transfer files between victim and attacker.
+  La commande Netcat (nc) est un utilitaire de ligne de commande permettant de lire et d'écrire des données entre deux réseaux informatiques. Elle peut être utilisée pour transférer des fichiers entre la victime et l'attaquant.
 
   Command Reference:
 
@@ -31,6 +31,7 @@ services:
 OS:
   - Windows
   - Linux
+  - Approved-tool
 attack_types:
   - General
 references:

@@ -1,6 +1,6 @@
 ---
 description: |
-  John the Ripper is a popular password cracking tool that uses a variety of techniques to guess passwords. When used to crack an SSH key, John can attempt to guess the passphrase used to encrypt the private key, allowing an attacker to gain unauthorized access to the remote server.
+  John the Ripper est un outil populaire de craquage de mots de passe qui utilise une variété de techniques pour deviner les mots de passe. Lorsqu'il est utilisé pour casser une clé SSH, John peut tenter de deviner la phrase de passe utilisée pour chiffrer la clé privée, ce qui permet à un attaquant d'obtenir un accès non autorisé au serveur distant.
 
   Command Reference:
   ```
@@ -21,6 +21,7 @@ services:
 OS:
   - Windows
   - Linux
+  - Approved-tool
 attack_types:
   - Cracking
 references:

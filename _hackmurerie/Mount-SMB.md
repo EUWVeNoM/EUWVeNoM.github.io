@@ -1,17 +1,17 @@
 ---
 description: |
-  To mount an SMB (Server Message Block) share using the mount command in Linux, you would typically use the cifs filesystem type, which is an implementation of the SMB protocol.
+  Pour monter un partage SMB (Server Message Block) à l'aide de la commande mount sous Linux, vous utilisez généralement le type de système de fichiers cifs, qui est une implémentation du protocole SMB.
 
   Command Reference:
-  ```
-  Username: Guest
 
-  password: empty
+    Username: Guest
 
-  Share: //10.129.253.46/Development
+    password: empty
 
-  Local folder: devel
-  ```
+    Share: //10.129.253.46/Development
+
+    Local folder: devel
+
 command: |
   mount -t cifs -o vers=2.1,username='Guest',password='' //10.129.253.46/Development devel
 
@@ -23,6 +23,7 @@ services:
   - SMB
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

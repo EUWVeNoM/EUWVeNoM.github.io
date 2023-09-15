@@ -1,6 +1,6 @@
 ---
 description: |
-  ropnop's kerbrute bruteforces and enumerates valid Active Directory accounts through Kerberos Pre-Authentication. The following command will attempt to enumerate valid usernames given a list of usernames to try.
+  Kerbrute de ropnop effectue une recherche brute et énumère les comptes Active Directory valides par le biais de la préauthentification Kerberos. La commande suivante tente d'énumérer les noms d'utilisateur valides à partir d'une liste de noms d'utilisateur à essayer.
 
   Command Reference:
 
@@ -16,6 +16,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

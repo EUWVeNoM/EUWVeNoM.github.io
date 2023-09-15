@@ -1,6 +1,6 @@
 ---
 description: |
-  Nmap's `krb5-enum-users` script attempts to bruteforce and enumerate valid Active Directory accounts through Kerberos Pre-Authentication. The following command will attempt to enumerate valid usernames given a list of usernames to try.
+  Le script `krb5-enum-users` de Nmap tente de forcer et d'énumérer les comptes Active Directory valides à travers la préauthentification Kerberos. La commande suivante tentera d'énumérer les noms d'utilisateurs valides à partir d'une liste de noms d'utilisateurs à essayer.
 
   Command Reference:
 
@@ -19,6 +19,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:
