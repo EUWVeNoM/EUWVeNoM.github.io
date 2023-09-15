@@ -1,11 +1,11 @@
 ---
 description: |
-  Python command to make an interactive shell of your simple shell. The pty module let’s you spawn a psuedo-terminal that can fool commands like su into thinking they are being executed in a proper terminal.
+  Commande Python pour créer un shell interactif à partir d'un simple shell. Le module pty vous permet de créer un psuedo-terminal qui peut tromper des commandes comme su en leur faisant croire qu'elles sont exécutées dans un vrai terminal.
 
   Command Reference:
-  ```
-  Variant of shell you will get: /bin/bash or /bin/sh
-  ```
+
+    Variant of shell you will get: /bin/bash or /bin/sh
+
 command: |
   python3 -c 'import pty;pty.spawn("/bin/bash")'
 
@@ -23,6 +23,7 @@ services:
 OS:
   - Linux
   - Windows
+  - Approved-tool
 attack_types:
   - Persistence
   - General

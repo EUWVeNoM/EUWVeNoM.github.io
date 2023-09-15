@@ -1,6 +1,6 @@
 ---
 description: |
-  PSCredential is a PowerShell cmdlet used to create a credential object. It is used to securely store and retrieve usernames and passwords in scripts or commands. The PSCredential cmdlet requires a username and a SecureString object for the password. 
+  PSCredential est une cmdlet PowerShell utilisée pour créer un objet d'identification. Elle permet de stocker et de récupérer en toute sécurité des noms d'utilisateur et des mots de passe dans des scripts ou des commandes. La cmdlet PSCredential nécessite un nom d'utilisateur et un objet SecureString pour le mot de passe.
 
   Command Reference:
 
@@ -18,6 +18,7 @@ services:
 
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - General
 references:

@@ -1,6 +1,6 @@
 ---
 description: |
-  Rubeus' `kerberoast` module will attempt to fetch Service Principal Names that are associated with normal user accounts. What is returned is a ticket that is encrypted with the user account's password, which can then be bruteforced offline. The following command is run on a Windows machine in the victim domain.
+  Le module `kerberoast` de Rubeus va tenter de récupérer les noms de service (Service Principal Names) qui sont associés à des comptes d'utilisateurs normaux. Il renvoie un ticket crypté avec le mot de passe du compte utilisateur, qui peut ensuite être forcé hors ligne. La commande suivante est exécutée sur une machine Windows du domaine victime.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ services:
   - Kerberos
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - PrivEsc

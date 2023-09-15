@@ -1,6 +1,6 @@
 ---
 description: |
-  Rubeus' `brute` module bruteforces and enumerates valid Active Directory accounts through Kerberos Pre-Authentication. The following command will attempt to brute force valid username and passwords logins given a list of usernames and a list of passwords.
+  Le module `brute` de Rubeus permet de forcer brutalement et d'énumérer les comptes Active Directory valides grâce à la préauthentification Kerberos. La commande suivante tente de forcer des identifiants et des mots de passe valides à partir d'une liste d'identifiants et de mots de passe.
 
   Command Reference:
 
@@ -19,6 +19,7 @@ services:
   - Kerberos
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

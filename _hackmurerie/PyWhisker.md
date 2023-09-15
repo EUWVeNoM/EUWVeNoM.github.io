@@ -1,6 +1,6 @@
 ---
 description: |
-  pyWhisker is a tool allowing users to manipulate the msDS-KeyCredentialLink attribute of a target user/computer to obtain full control over that object. It's based on Impacket and on our Python equivalent of Michael Grafnetter's DSInternals called PyDSInternals. This tool, along with Dirk-jan's PKINITtools allow for a complete primitive exploitation on UNIX-based systems only.
+  pyWhisker est un outil permettant aux utilisateurs de manipuler l'attribut msDS-KeyCredentialLink d'un utilisateur/ordinateur cible afin d'obtenir un contrôle total sur cet objet. Il est basé sur Impacket et sur notre équivalent Python de DSInternals de Michael Grafnetter appelé PyDSInternals. Cet outil, ainsi que les PKINITtools de Dirk-jan, permettent une exploitation primitive complète sur les systèmes basés sur UNIX uniquement.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ services:
   - Kerberos
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

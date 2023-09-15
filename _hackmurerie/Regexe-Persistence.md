@@ -1,6 +1,6 @@
 ---
 description: |
-  It is possible to gain persistence on a windows machine by adding reg keys that will execute an arbitrary payload during logon or startup. Keys added to the HKLM hive will execute on startup. Keys added to the HKCU hive will execute when the corresponding user logs on. Adding keys into the HKLM hive will require an elevated shell. There are four keys that can be used: Run, RunOnce, RunServices, and RunServicesOnce. By default, a RunOnce key is deleted after the specified command is executed. The path for these keys is the same for the HKLM and HKCU hives.
+  Il est possible d'obtenir une persistance sur une machine Windows en ajoutant des clés reg qui exécuteront une charge utile arbitraire lors de la connexion ou du démarrage. Les clés ajoutées à la ruche HKLM s'exécuteront au démarrage. Les clés ajoutées à la ruche HKCU s'exécuteront lorsque l'utilisateur correspondant se connectera. L'ajout de clés dans la ruche HKLM nécessite un shell élevé. Quatre clés peuvent être utilisées : Run, RunOnce, RunServices et RunServicesOnce. Par défaut, une clé RunOnce est supprimée après l'exécution de la commande spécifiée. Le chemin d'accès à ces clés est le même pour les ruches HKLM et HKCU.
 
   Command Reference:
 
@@ -21,6 +21,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Persistence
 references:

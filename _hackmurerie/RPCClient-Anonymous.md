@@ -1,6 +1,6 @@
 ---
 description: |
-  rpcclient is a tool used for executing client side MS-RPC functions to manage Windows NT clients from Unix workstatios. From an offensive security standpoint, it can be used to enumerate users, groups, and other potentially sensitive information. The following command attempt to connect to the NetBIOS server anonymously, in order to enumerate using MS-RPC available commands/functions.
+  Rpcclient est un outil utilisé pour exécuter des fonctions MS-RPC côté client afin de gérer les clients Windows NT à partir de postes de travail Unix. Du point de vue de la sécurité offensive, il peut être utilisé pour énumérer les utilisateurs, les groupes et d'autres informations potentiellement sensibles. La commande suivante tente de se connecter au serveur NetBIOS de manière anonyme, afin d'énumérer les commandes/fonctions MS-RPC disponibles.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ services:
   - RPC
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

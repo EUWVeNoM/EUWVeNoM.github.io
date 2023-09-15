@@ -1,6 +1,6 @@
 ---
 description: |
-  ldapmonitor.py allows you to monitor creation, deletion and changes to LDAP objects live during your pentest.
+  ldapmonitor.py vous permet de surveiller la création, la suppression et les modifications des objets LDAP en direct pendant votre pentest.
 
   Command Reference:
 
@@ -27,6 +27,7 @@ services:
   - NTLM
 OS:
   - Linux
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

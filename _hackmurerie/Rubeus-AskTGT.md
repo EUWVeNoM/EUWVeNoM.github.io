@@ -1,6 +1,6 @@
 ---
 description: |
-  Rubeus' `asktgt` module uses a valid user's NTLM hash to request Kerberos tickets, in order to access any service or machine where that user has permissions.
+  Le module `asktgt` de Rubeus utilise le hash NTLM d'un utilisateur valide pour demander des tickets Kerberos, afin d'accéder à n'importe quel service ou machine où cet utilisateur a des permissions.
 
   Command Reference:
 
@@ -19,6 +19,7 @@ services:
   - Kerberos
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
 references:

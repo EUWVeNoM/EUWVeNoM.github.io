@@ -1,6 +1,6 @@
 ---
 description: |
-  PowerView is a module within PowerSploit written in PowerShell to gain network situational awareness on Windows domains. The below command will query the Domain Controller for a list of available shares that the current user has access to.
+  PowerView est un module de PowerSploit écrit en PowerShell pour obtenir une connaissance de la situation du réseau sur les domaines Windows. La commande ci-dessous interroge le contrôleur de domaine pour obtenir une liste des partages disponibles auxquels l'utilisateur actuel a accès.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ items:
   - Shell
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Enumeration
 references:

@@ -1,6 +1,6 @@
 ---
 description: |
-  Rubeus' `asreproast` module will attempt to harvest the non-preauth AS_REP responses for a given list of usernames. These responses will be encrypted with the user's password, which can then be cracked offline. The following command is run on a Windows machine in the victim domain.
+  Le module `asreproast` de Rubeus va tenter de récolter les réponses AS_REP non préauth pour une liste donnée de noms d'utilisateurs. Ces réponses seront chiffrées avec le mot de passe de l'utilisateur, qui peut ensuite être déchiffré hors ligne. La commande suivante est exécutée sur une machine Windows dans le domaine de la victime.
 
   Command Reference:
 
@@ -14,6 +14,7 @@ services:
   - Kerberos
 OS:
   - Windows
+  - Approved-tool
 attack_types:
   - Exploitation
   - PrivEsc
